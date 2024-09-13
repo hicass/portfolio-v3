@@ -1,11 +1,13 @@
 import { FC } from 'react';
+import Hero from './components/Hero/Hero';
 
 const LandingPage: FC = () => {
   return (
-    <div>
-      <h1 className="text-9xl font-[family-name:var(--font-koolegant)]">Hii</h1>
-      <h1 className="text-9xl">Hii</h1>
-    </div>
+    <main>
+      <div className='overflow-y-visible overflow-x-hidden h-screen relative parallax-wrapper'>
+        <Hero />
+      </div>
+    </main>
   );
 };
 
