@@ -3,25 +3,111 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --white: #F6F2F0;
+  --beige-1: #a89c90;
+  --beige-2: #988570;
+  --beige-3: #625446;
+  --brown: #4a3f33;
+  --brown-2: #2e2c29;
+  --brown-3: #3f3c39;
+  --dark-brown-1: #1d1c1b;
+  --dark-brown-2: #2c2720;
+  --black-1: #0e0e0e;
+  --black-2: #211c19;
+  --black-3: #0b0b0a;
+  --black-4: #131312;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(75deg, var(--black-1), var(--black-2),
+      var(--black-3), var(--dark-brown-1), var(--black-4));
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  color: var(--white);
+  transition: all 0.4s;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* ------ Hero Parallax ------- */
+.parallax-wrapper {
+  perspective: 15px;
+}
+
+.hero {
+  transform-style: preserve-3d;
+  transition: all 0.9s;
+}
+
+.parallax-boops {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transition: all 0.9s;
+}
+
+#parallax-top-boops {
+  -ms-transform: translateZ(-10px) scale(2);
+  -webkit-transform: translateZ(-10px) scale(2);
+  -moz-transform: translateZ(-10px) scale(2);
+  -o-transform: translateZ(-10px) scale(2);
+  transform: translateZ(-10px) scale(1.6);
+}
+
+#parallax-top-tendrils1 {
+  -ms-transform: translateZ(-15px) scale(2.6);
+  -webkit-transform: translateZ(-15px) scale(2.6);
+  -moz-transform: translateZ(-15px) scale(2.6);
+  -o-transform: translateZ(-15px) scale(2.6);
+  transform: translateZ(-15px) scale(2);
+}
+
+#parallax-top-tendrils2 {
+  -ms-transform: translateZ(-17px) scale(2.8);
+  -webkit-transform: translateZ(-17px) scale(2.8);
+  -moz-transform: translateZ(-17px) scale(2.8);
+  -o-transform: translateZ(-17px) scale(2.8);
+  transform: translateZ(-17px) scale(2.2);
+}
+
+@media screen and (max-width: 1400px) {
+  .parallax-boops {
+    top: -5%;
+  }
+}
+
+@media screen and (max-width: 1205px) {
+  .parallax-boops {
+    top: -15%;
+  }
+}
+
+@media screen and (max-width: 1105px) {
+  .parallax-boops {
+    top: -35%;
+  }
+}
+
+@media screen and (max-width: 882px) {
+  .parallax-boops {
+    top: -60%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
