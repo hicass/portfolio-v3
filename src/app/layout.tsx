@@ -5,12 +5,10 @@ import "./globals.css";
 const koolegant = localFont({
   src: "./fonts/Koolegant.ttf",
   variable: "--font-koolegant",
-  weight: "100 900",
 });
 const satoshi = localFont({
   src: "./fonts/Satoshi.otf",
   variable: "--font-satoshi",
-  weight: "100 900",
 });
 
 export const metadata: Metadata = {
