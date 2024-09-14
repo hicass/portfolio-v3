@@ -18,6 +18,12 @@
   --black-4: #131312;
 }
 
+/* ------ Headings ------- */
+
+h2 {
+  @apply text-5xl tracking-wider
+}
+
 body {
   background: linear-gradient(75deg, var(--black-1), var(--black-2),
       var(--black-3), var(--dark-brown-1), var(--black-4));
