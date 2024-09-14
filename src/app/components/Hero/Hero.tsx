@@ -4,12 +4,12 @@ import HeroBackground from './HeroBackground';
 
 const Hero: FC = () => {
   return (
-    <div className="flex flex-col items-center relative hero">
+    <header className="flex flex-col items-center relative w-full hero">
       <HeroBackground />
 
       <div className="flex flex-col w-2/3 gap-4 h-screen justify-center -mt-10">
-        <h2 className="text-5xl">hi i'm</h2>
-        <h1 className="text-[10rem] leading-none font-[family-name:var(--font-koolegant)]">
+        <span className="text-5xl">hi i'm</span>
+        <h1 className="text-[9rem] leading-none tracking-wider font-[family-name:var(--font-koolegant)]">
           Cass
         </h1>
 
@@ -18,7 +18,7 @@ const Hero: FC = () => {
           realities.
         </p>
       </div>
-    </div>
+    </header>
   );
 };
 
