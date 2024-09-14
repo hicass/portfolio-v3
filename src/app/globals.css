@@ -21,7 +21,7 @@
 /* ------ Headings ------- */
 
 h2 {
-  @apply text-5xl tracking-wider
+  @apply text-4xl tracking-wider
 }
 
 body {

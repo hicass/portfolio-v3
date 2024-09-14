@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const koolegant = localFont({
-  src: "./fonts/Koolegant.ttf",
-  variable: "--font-koolegant",
+const universalExpansion = localFont({
+  src: "./fonts/Universal-Expansion.ttf",
+  variable: "--font-universal-expansion",
 });
 const satoshi = localFont({
   src: "./fonts/Satoshi.otf",
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${koolegant.variable} ${satoshi.variable} antialiased`}
+        className={`${universalExpansion.variable} ${satoshi.variable} antialiased`}
       >
         {children}
       </body>
