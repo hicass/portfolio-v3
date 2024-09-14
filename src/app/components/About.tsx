@@ -9,7 +9,7 @@ const aboutData = [
 const About: FC = () => {
   return (
     <section>
-      <h2 className="font-[family-name:var(--font-koolegant)]">about me</h2>
+      <h2 className="font-[family-name:var(--font-universal-expansion)]">about me</h2>
 
       <div className='flex flex-col gap-6 mt-10'>
         {aboutData.map((p, idx) => (
