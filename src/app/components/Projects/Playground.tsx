@@ -67,12 +67,20 @@ const playgroundData = [
 const Projects: FC = () => {
   return (
     <section className="flex flex-col items-center relative">
-      <span id="playground" className='absolute -top-20 opacity-0' aria-hidden="true">Invisible Nav Anchor</span>
+      <span
+        id="playground"
+        className="absolute -top-20 opacity-0"
+        aria-hidden="true"
+      >
+        Invisible Nav Anchor
+      </span>
       <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
         playground
       </h2>
 
-      <p className='w-full mt-10 text-2xl'>My little corner for trying out new tech and building fun projects :)</p>
+      <p className="w-full mt-10 text-2xl">
+        My little corner for trying out new tech and building fun projects :)
+      </p>
 
       <div className="flex flex-col items-center gap-16 mt-10">
         {playgroundData.map((p, idx) => (
