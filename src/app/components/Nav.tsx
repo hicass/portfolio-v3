@@ -19,7 +19,7 @@ const navData = {
 const Nav: FC = () => {
   return (
     <>
-      <nav className="flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl">
+      <nav className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl">
         <ul className="flex flex-col items-end">
           {navData.pageLinks.map((link, idx) => (
             <li key={idx}>
@@ -31,7 +31,7 @@ const Nav: FC = () => {
         </ul>
       </nav>
 
-      <aside className="flex flex-row w-fit sticky top-6 -mt-24 px-8">
+      <aside className="hidden md:flex flex-row w-fit sticky top-6 -mt-24 px-8">
         <ul className="flex flex-col gap-4">
           {navData.socialLinks.map((link, idx) => (
             <li key={idx}>

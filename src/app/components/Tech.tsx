@@ -22,7 +22,7 @@ const Tech: FC = () => {
         tech
       </h2>
 
-      <div className="flex flex-row flex-wrap justify-center w-2/3 gap-24 mt-10">
+      <div className="flex flex-row flex-wrap md:justify-center md:w-2/3 gap-6 md:gap-24 mt-10">
         {techData.map((tech, idx) => (
           <div className="flex flex-col items-center gap-4 text-7xl" key={idx}>
             <tech.icon />

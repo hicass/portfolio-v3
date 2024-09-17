@@ -22,10 +22,10 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   return (
-    <article className="flex flex-col gap-6 p-4 rounded-lg border-t-[1px] border-t-transparent hover:border-t-brown hover:bg-dark-brown-1 z-40">
+    <article className="flex flex-col w-full sm:w-2/3 lg:w-full gap-6 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40">
       {/* Top Section */}
-      <div className="flex gap-6">
-        <figure className="w-1/2">
+      <div className="flex flex-col w-full lg:flex-row gap-6">
+        <figure className="lg:w-1/2">
           {/* Image that showcases the project */}
           <Image
             src={project.imagePath}
@@ -37,7 +37,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         </figure>
 
         {/* Information about the project */}
-        <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 lg:w-1/2">
           <header>
             <a
               href={project.liveLink}
@@ -53,8 +53,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex items-end gap-6">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row items-end gap-6">
+        <div className="w-full lg:w-1/2">
           <ul className="flex flex-wrap gap-2">
             {project.techList.map((tech, idx) => (
               // What technologies were used
@@ -68,7 +68,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </ul>
         </div>
 
-        <div className="flex justify-between gap-4 w-1/2">
+        <div className="flex justify-between gap-4 w-full lg:w-1/2">
           <p className="text-lg">{project.date}</p>
           <a
             href={project.repoLink}

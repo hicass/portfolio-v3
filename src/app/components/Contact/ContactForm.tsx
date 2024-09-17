@@ -73,7 +73,7 @@ const ContactForm: FC = () => {
   }
 
   return (
-    <section className="flex flex-col items-center gap-6 w-full border-2 md:border-none">
+    <section className="flex flex-col items-center gap-6 w-full">
       {/* Confirmation that the message was sent */}
       <div className="flex flex-col items-center gap-2 relative w-full">
         <p className="invisible" aria-hidden="true">
@@ -91,7 +91,7 @@ const ContactForm: FC = () => {
         ref={form}
         onSubmit={sendEmail}
         noValidate
-        className="flex flex-col gap-4 p-4 w-full lg:w-2/3 xl:w-1/2 2xl:w-1/3 rounded-lg mt-2 border-t-[1px] border-t-brown bg-dark-brown-1"
+        className="flex flex-col gap-4 p-4 w-full sm:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2 rounded-lg mt-2 border-t-[1px] border-t-brown bg-dark-brown-1"
       >
         <div className="flex flex-col gap-2">
           <label className="text-lg">Name</label>
