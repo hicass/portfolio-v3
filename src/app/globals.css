@@ -18,6 +18,11 @@
   --black-4: #131312;
 }
 
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+
 /* ------ Headings ------- */
 
 h2 {
