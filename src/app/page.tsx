@@ -1,10 +1,12 @@
 import { FC } from 'react';
+
 import Hero from './components/Hero/Hero';
 import About from './components/About';
 import Tech from './components/Tech';
 import Nav from './components/Nav';
-import Projects from './components/Projects';
-import Playground from './components/Playground';
+import Projects from './components/Projects/Projects';
+import Playground from './components/Projects/Playground';
+import Contact from './components/Contact/Contact';
 
 const LandingPage: FC = () => {
   return (
@@ -19,7 +21,21 @@ const LandingPage: FC = () => {
             <Tech />
             <Projects />
             <Playground />
+            <Contact />
           </div>
+
+          <p className="p-2 px-4 text-md text-beige-2">
+            Built and designed by yours truly, using Next.js and a handful of
+            other technologies. Check out the{' '}
+            <a
+              href="https://github.com/hicass/portfolio-v3"
+              target="_blank"
+              className="text-beige hover:text-white hover:cursor-pointer"
+            >
+              source code
+            </a>{' '}
+            to learn more.
+          </p>
         </div>
       </div>
     </main>
