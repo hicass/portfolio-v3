@@ -51,7 +51,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <p className="text-xl">{project.description}</p>
         </div>
       </div>
-      
+
       {/* Bottom Section */}
       <div className="flex items-end gap-6">
         <div className="w-1/2">

@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         white: 'var(--white)',
         'beige': 'var(--beige)',
+        'beige-2': 'var(--beige-2)',
         'brown': 'var(--brown)',
         'dark-brown-1': 'var(--dark-brown-1)',
         'dark-brown-2': 'var(--dark-brown-2)',
