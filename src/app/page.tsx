@@ -9,7 +9,7 @@ import Playground from './components/Playground';
 const LandingPage: FC = () => {
   return (
     <main>
-      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative font-[family-name:var(--font-satoshi)] parallax-wrapper">
+      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)] parallax-wrapper">
         <Hero />
         <Nav />
 
