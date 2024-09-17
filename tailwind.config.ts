@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         'cream': '#F6F2F0',
         'beige': '#a89c90',
+        'brown': '#4a3f33',
+        'dark-brown-1': '#1d1c1b',
+        'dark-brown-2': '#2c2720',
       },
     },
   },
