@@ -19,11 +19,11 @@ const navData = {
 const Nav: FC = () => {
   return (
     <>
-      <nav className="flex flex-row w-full justify-end sticky top-5  -mt-36 px-8 pb-2 text-2xl ">
+      <nav className="flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl">
         <ul className="flex flex-col items-end">
           {navData.pageLinks.map((link, idx) => (
             <li key={idx}>
-              <a href={link.href} className="text-beige hover:text-cream">
+              <a href={link.href} className="text-beige hover:text-white">
                 {link.text}
               </a>
             </li>
@@ -38,7 +38,7 @@ const Nav: FC = () => {
               <a
                 href={link.href}
                 target="_blank"
-                className="text-beige hover:text-cream text-4xl"
+                className="text-beige hover:text-white text-4xl"
               >
                 <link.icon />
               </a>

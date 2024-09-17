@@ -42,7 +42,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <a
               href={project.liveLink}
               target="_blank"
-              className="w-fit flex gap-2 items-center text-2xl text-beige hover:text-cream"
+              className="w-fit flex gap-2 items-center text-2xl text-beige hover:text-white"
             >
               {project.title}
               <CgArrowsExpandUpRight />
@@ -72,7 +72,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <p className="text-lg">{project.date}</p>
           <a
             href={project.repoLink}
-            className="flex gap-2 items-center text-beige hover:text-cream"
+            className="flex gap-2 items-center text-beige hover:text-white"
             target="_blank"
           >
             <p className="text-lg">view repo</p>

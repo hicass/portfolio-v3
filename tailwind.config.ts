@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'cream': '#F6F2F0',
-        'beige': '#a89c90',
-        'brown': '#4a3f33',
-        'dark-brown-1': '#1d1c1b',
-        'dark-brown-2': '#2c2720',
+        white: 'var(--white)',
+        'beige': 'var(--beige)',
+        'brown': 'var(--brown)',
+        'dark-brown-1': 'var(--dark-brown-1)',
+        'dark-brown-2': 'var(--dark-brown-2)',
       },
     },
   },
