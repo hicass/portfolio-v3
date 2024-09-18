@@ -16,7 +16,7 @@ const Hero: FC = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <span className="text-3xl md:text-5xl">hi i'm</span>
+        <span className="text-3xl md:text-5xl">hi i&apos;m</span>
         <h1 className="text-[5rem] md:text-[7rem] leading-none tracking-wider font-[family-name:var(--font-universal-expansion)]">
           Cass
         </h1>

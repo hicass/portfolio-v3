@@ -49,7 +49,7 @@ const Projects: FC = () => {
         transition={{ duration: 0.8 }}
         className="w-full mt-10 text-2xl"
       >
-        Take a look at some of the projects I've been involved in.
+        Take a look at some of the projects I&apos;ve been involved in.
       </motion.p>
 
       <div id="projects" className="flex flex-col items-center gap-16 mt-10">
