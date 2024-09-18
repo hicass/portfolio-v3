@@ -44,7 +44,7 @@ const playgroundData = [
     title: 'Mancala',
     description:
       'This project was my second endeavor in web development, demonstrating my growing expertise and passion for crafting interactive experiences. Two players take turns strategically distributing the number of pebbles contained inside each of the pits counter-clockwise around the board, until there is a winner.',
-    date: 'April 202',
+    date: 'April 2023',
     imagePath: '/images/mancala.png',
     imageAlt: 'Mancala Landing Page',
     techList: ['JavaScript', 'HTML', 'CSS', 'Github Pages'],
@@ -55,7 +55,7 @@ const playgroundData = [
     title: 'Tic Tac Toe',
     description:
       'This was my inaugural project, a Tic Tac Toe game that marked the beginning of my web development journey. A modern electronic rendition of the classic board game, the objective is to be the first to form a horizontal, vertical, or diagonal line of three of your markers, thereby securing victory.',
-    date: 'April 202',
+    date: 'April 2023',
     imagePath: '/images/tictactoe.png',
     imageAlt: 'Tic Tac Toe Landing Page',
     techList: ['JavaScript', 'HTML', 'CSS', 'Github Pages'],

@@ -1,4 +1,7 @@
+'use client';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
+
 import ContactForm from './ContactForm';
 
 const Contact: FC = () => {
@@ -11,11 +14,21 @@ const Contact: FC = () => {
       >
         Invisible Nav Anchor
       </span>
-      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full font-[family-name:var(--font-universal-expansion)]"
+      >
         Contact
-      </h2>
+      </motion.h2>
 
-      <div className="flex flex-col gap-4 w-full mt-10 ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col gap-4 w-full mt-10 "
+      >
         <p className="text-2xl">
           Thank you for taking the time to explore my corner of the internet. I
           genuinely appreciate your interest in my work. If you have any
@@ -28,7 +41,7 @@ const Contact: FC = () => {
         >
           hicass.dev@gmail.com
         </a>
-      </div>
+      </motion.div>
 
       <ContactForm />
     </section>
