@@ -1,4 +1,6 @@
+'use client';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import { SiTypescript } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
@@ -17,17 +19,35 @@ const techData = [
 
 const Tech: FC = () => {
   return (
-    <section className="flex flex-col items-center">
-      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
+    <section className="flex flex-col items-center relative">
+      <span
+        id="tech"
+        className="absolute -top-20 opacity-0"
+        aria-hidden="true"
+      >
+        Invisible Nav Anchor
+      </span>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full font-[family-name:var(--font-universal-expansion)]"
+      >
         tech
-      </h2>
+      </motion.h2>
 
       <div className="flex flex-row flex-wrap md:justify-center md:w-2/3 gap-6 md:gap-24 mt-10">
         {techData.map((tech, idx) => (
-          <div className="flex flex-col items-center gap-4 text-7xl" key={idx}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center gap-4 text-7xl"
+            key={idx}
+          >
             <tech.icon />
             <p className="text-xl">{tech.name}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

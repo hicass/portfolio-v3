@@ -1,6 +1,40 @@
+'use client';
 import { FC } from 'react';
+import { motion, Variants } from 'framer-motion';
 
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+
+const slideInLVars: Variants = {
+  offscreen: {
+    x: -10,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 3.5,
+    },
+  },
+};
+
+const slideInRVars: Variants = {
+  offscreen: {
+    x: 10,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 3.5,
+    },
+  },
+};
 
 const navData = {
   socialLinks: [
@@ -19,7 +53,16 @@ const navData = {
 const Nav: FC = () => {
   return (
     <>
-      <nav className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl">
+      <motion.nav
+        variants={slideInRVars}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{
+          once: true,
+          amount: 0.4,
+        }}
+        className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl"
+      >
         <ul className="flex flex-col items-end">
           {navData.pageLinks.map((link, idx) => (
             <li key={idx}>
@@ -29,9 +72,18 @@ const Nav: FC = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </motion.nav>
 
-      <aside className="hidden md:flex flex-row w-fit sticky top-6 -mt-24 px-8">
+      <motion.aside
+        variants={slideInLVars}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{
+          once: true,
+          amount: 0.4,
+        }}
+        className="hidden md:flex flex-row w-fit sticky top-6 -mt-24 px-8"
+      >
         <ul className="flex flex-col gap-4">
           {navData.socialLinks.map((link, idx) => (
             <li key={idx}>
@@ -45,7 +97,7 @@ const Nav: FC = () => {
             </li>
           ))}
         </ul>
-      </aside>
+      </motion.aside>
     </>
   );
 };

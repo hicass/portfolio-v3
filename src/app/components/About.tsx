@@ -1,4 +1,6 @@
+'use client';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 const aboutData = [
   'Creativity is at the heart of everything I do. I view coding as an art form, where every line of code has the potential to be elegant and expressive. I value the importance of visual appeal, attention to detail, and believe in the power that blending creativity and technology has.',
@@ -8,12 +10,34 @@ const aboutData = [
 
 const About: FC = () => {
   return (
-    <section>
-      <h2 className="font-[family-name:var(--font-universal-expansion)]">about me</h2>
+    <section className="relative">
+      <span
+        id="about"
+        className="absolute -top-20 opacity-0"
+        aria-hidden="true"
+      >
+        Invisible Nav Anchor
+      </span>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="font-[family-name:var(--font-universal-expansion)]"
+      >
+        about me
+      </motion.h2>
 
-      <div className='flex flex-col gap-6 mt-10'>
+      <div className="flex flex-col gap-6 mt-10">
         {aboutData.map((p, idx) => (
-          <p key={idx} className='text-2xl'>{p}</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            key={idx}
+            className="text-2xl"
+          >
+            {p}
+          </motion.p>
         ))}
       </div>
     </section>
