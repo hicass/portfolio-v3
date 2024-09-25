@@ -90,11 +90,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <ul className="flex flex-wrap gap-2">
             {project.techList.map((tech, idx) => (
               // What technologies were used
-              <a href={tech.link} target="_blank">
-                <li
-                  className="py-1 px-2 rounded-lg h-fit text-sm bg-dark-brown-2 hover:bg-brown"
-                  key={idx}
-                >
+              <a href={tech.link} target="_blank" key={idx}>
+                <li className="py-1 px-2 rounded-lg h-fit text-sm bg-dark-brown-2 hover:bg-brown">
                   {tech.title}
                 </li>
               </a>
