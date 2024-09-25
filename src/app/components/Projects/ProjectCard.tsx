@@ -13,9 +13,14 @@ type Project = {
   date: string;
   imagePath: string;
   imageAlt: string;
-  techList: string[];
+  techList: ProjectTech[];
   liveLink: string;
   repoLink: string;
+};
+
+type ProjectTech = {
+  title: string;
+  link: string;
 };
 
 interface ProjectCardProps {
@@ -48,7 +53,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         once: true,
         amount: 0.1,
       }}
-      className="flex flex-col w-full sm:w-2/3 lg:w-full gap-6 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40"
+      className="flex flex-col w-full gap-6 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40"
     >
       {/* Top Section */}
       <div className="flex flex-col w-full lg:flex-row gap-6">
@@ -85,12 +90,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <ul className="flex flex-wrap gap-2">
             {project.techList.map((tech, idx) => (
               // What technologies were used
-              <li
-                className="py-1 px-2 rounded-lg h-fit text-sm bg-dark-brown-2"
-                key={idx}
-              >
-                {tech}
-              </li>
+              <a href={tech.link} target="_blank" key={idx}>
+                <li className="py-1 px-2 rounded-lg h-fit text-sm bg-dark-brown-2 hover:bg-brown">
+                  {tech.title}
+                </li>
+              </a>
             ))}
           </ul>
         </div>

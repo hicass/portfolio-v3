@@ -9,12 +9,12 @@ import { BiLogoNodejs } from 'react-icons/bi';
 import { FaReact, FaGitAlt } from 'react-icons/fa';
 
 const techData = [
-  { name: 'React', icon: FaReact },
-  { name: 'Next.js', icon: TbBrandNextjs },
-  { name: 'Git', icon: FaGitAlt },
-  { name: 'Node.js', icon: BiLogoNodejs },
-  { name: 'TypeScript', icon: SiTypescript },
-  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'React', icon: FaReact, link: 'https://react.dev/' },
+  { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
+  { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
+  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
+  { name: 'TypeScript', icon: SiTypescript, link: 'https://www.typescriptlang.org/' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, link: 'https://tailwindcss.com/' },
 ];
 
 const Tech: FC = () => {
@@ -38,16 +38,18 @@ const Tech: FC = () => {
 
       <div className="flex flex-row flex-wrap md:justify-center md:w-2/3 gap-6 md:gap-24 mt-10">
         {techData.map((tech, idx) => (
-          <motion.div
+          <motion.a
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center gap-4 text-7xl"
+            href={tech.link}
+            target='_blank'
             key={idx}
           >
             <tech.icon />
             <p className="text-xl">{tech.name}</p>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>
