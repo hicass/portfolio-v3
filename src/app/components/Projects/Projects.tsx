@@ -22,6 +22,26 @@ const projectData = [
     liveLink: 'https://www.tagoperations.com/',
     repoLink: 'https://github.com/hicass/tag-ops-v3',
   },
+  {
+    title: 'RAMResume',
+    description:
+      "As a founding engineer, I collaborated closely with designers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. Starting from scratch, I contributed to the app's design by creating responsive wireframes in Figma to ensure a seamless user experience. (Currently in development—email me for login access!)",
+    date: 'July 2024 to Present',
+    imagePath: '/images/ramresume.png',
+    imageAlt: 'RAMResume Landing Page',
+    techList: [
+      { title: 'Next.js', link: 'https://nextjs.org/' },
+      { title: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
+      { title: 'Sanity', link: 'https://www.sanity.io/' },
+      { title: 'Mongoose', link: 'https://mongoosejs.com/docs/' },
+      { title: 'Express', link: 'https://expressjs.com/' },
+      {
+        title: 'OpenAI API',
+        link: 'https://platform.openai.com/docs/overview',
+      },
+    ],
+    liveLink: 'https://www.ramresume.com/',
+  },
 ];
 
 const Projects: FC = () => {

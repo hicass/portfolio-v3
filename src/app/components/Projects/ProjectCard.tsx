@@ -15,7 +15,7 @@ type Project = {
   imageAlt: string;
   techList: ProjectTech[];
   liveLink: string;
-  repoLink: string;
+  repoLink?: string;
 };
 
 type ProjectTech = {
@@ -99,17 +99,20 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </ul>
         </div>
 
-        <div className="flex justify-between gap-4 w-full lg:w-1/2">
+        <div className={`flex ${project.repoLink ? 'justify-between' : 'justify-end'} gap-4 w-full lg:w-1/2`}>
+          {project.repoLink && (
+            <a
+              href={project.repoLink}
+              className="flex gap-2 items-center text-beige hover:text-white"
+              target="_blank"
+            >
+              <p className="text-lg">view repo</p>
+              {/* Code icon */}
+              <BsCodeSlash />
+            </a>
+          )}
+
           <p className="text-lg">{project.date}</p>
-          <a
-            href={project.repoLink}
-            className="flex gap-2 items-center text-beige hover:text-white"
-            target="_blank"
-          >
-            <p className="text-lg">view repo</p>
-            {/* Code icon */}
-            <BsCodeSlash />
-          </a>
         </div>
       </div>
     </motion.article>
