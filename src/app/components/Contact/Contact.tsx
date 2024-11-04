@@ -29,7 +29,7 @@ const Contact: FC = () => {
         transition={{ duration: 0.8 }}
         className="flex flex-col gap-4 w-full mt-10 "
       >
-        <p className="text-2xl">
+        <p className="text-xl">
           Thank you for taking the time to explore my corner of the internet. I
           genuinely appreciate your interest in my work. If you have any
           questions, or just want to connect, feel free to reach out.

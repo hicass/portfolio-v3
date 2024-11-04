@@ -10,7 +10,7 @@ const Hero: FC = () => {
       <HeroBackground />
 
       <motion.div
-        className="flex flex-col mx-4 md:w-3/4 lg:w-2/3 2xl:w-1/2 gap-4 md:gap-8 h-screen justify-center -mt-28 md:-mt-10"
+        className="flex flex-col mx-4 md:max-w-4xl gap-4 md:gap-8 h-screen justify-center -mt-28 md:-mt-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -21,7 +21,7 @@ const Hero: FC = () => {
           Cass
         </h1>
 
-        <p className="text-3xl md:text-5xl leading-tight">
+        <p className="text-3xl md:text-5xl">
           I am a Software Developer who weaves code and dreams into tangible
           realities.
         </p>

@@ -16,7 +16,7 @@ const LandingPage: FC = () => {
         <Nav />
 
         <div className="w-full flex flex-col items-center -mt-10 md:mt-10">
-          <div className="mx-4 md:w-2/3 2xl:w-1/2 flex flex-col gap-28 md:gap-48">
+          <div className="mx-4 md:max-w-4xl flex flex-col gap-28 md:gap-48">
             <About />
             <Tech />
             <Projects />
@@ -24,7 +24,7 @@ const LandingPage: FC = () => {
             <Contact />
           </div>
 
-          <p className="p-2 px-4 text-md text-beige-2">
+          <p className="p-2 px-4 text-md text-beige-2 text-center">
             Built and designed by yours truly, using Next.js and a handful of
             other technologies. Check out the{' '}
             <a

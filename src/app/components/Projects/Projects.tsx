@@ -9,7 +9,7 @@ const projectData = [
     title: 'Tag Operations',
     description:
       "Solely designed and developed a modern, user-friendly website for Tag Ops, a company specializing in operational support. I created a responsive and engaging design that aligns with the company's personality.",
-    date: 'December 2023 to Present',
+    date: 'December 2023 - Present',
     imagePath: '/images/tagops.png',
     imageAlt: 'Tag Operations Landing Page',
     techList: [
@@ -26,7 +26,7 @@ const projectData = [
     title: 'RAMResume',
     description:
       "As a founding engineer, I collaborated closely with designers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. Starting from scratch, I contributed to the app's design by creating responsive wireframes in Figma to ensure a seamless user experience. (Currently in development—email me for login access!)",
-    date: 'July 2024 to Present',
+    date: 'July 2024 - Present',
     imagePath: '/images/ramresume.png',
     imageAlt: 'RAMResume Landing Page',
     techList: [
