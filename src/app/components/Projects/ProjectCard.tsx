@@ -17,7 +17,6 @@ type Project = {
 
 type ProjectTech = {
   title: string;
-  link: string;
 };
 
 interface ProjectCardProps {
@@ -55,13 +54,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
       >
         {/* Top Section */}
         <div className="flex flex-col w-full lg:flex-row gap-6">
-          <figure className="lg:w-1/2">
+          <figure className="w-full lg:w-1/2">
             {/* Image that showcases the project */}
             <Image
               src={project.imagePath}
               alt={project.imageAlt}
-              height={500}
-              width={500}
+              height={800}
+              width={800}
               className="rounded"
             />
           </figure>
@@ -82,9 +81,12 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <ul className="flex flex-wrap gap-2">
               {project.techList.map((tech, idx) => (
                 // What technologies were used
-                  <li key={idx} className="py-1 px-2 rounded h-fit text-sm bg-dark-brown-2">
-                    {tech.title}
-                  </li>
+                <li
+                  key={idx}
+                  className="py-1 px-2 rounded h-fit text-sm bg-dark-brown-2"
+                >
+                  {tech.title}
+                </li>
               ))}
             </ul>
           </div>
