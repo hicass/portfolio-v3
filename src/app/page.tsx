@@ -16,7 +16,7 @@ const LandingPage: FC = () => {
         <Nav />
 
         <div className="w-full flex flex-col items-center -mt-10 md:mt-10">
-          <div className="mx-4 md:max-w-4xl flex flex-col gap-28 md:gap-48">
+          <div className="mx-4 sm:w-3/4 md:w-[60%] lg:max-w-3xl lg:w-full xl:max-w-4xl flex flex-col gap-28 md:gap-48">
             <About />
             <Tech />
             <Projects />

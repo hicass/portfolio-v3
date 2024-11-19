@@ -61,7 +61,7 @@ const Nav: FC = () => {
           once: true,
           amount: 0.4,
         }}
-        className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-2xl"
+        className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-xl"
       >
         <ul className="flex flex-col items-end">
           {navData.pageLinks.map((link, idx) => (

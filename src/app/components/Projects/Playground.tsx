@@ -10,11 +10,11 @@ const playgroundData = [
     imagePath: '/images/wgc.png',
     imageAlt: 'Whiskered Grapes Co Landing Page',
     techList: [
-      { title: 'React', link: 'https://react.dev/' },
-      { title: 'Node.js', link: 'https://nodejs.org/en' },
-      { title: 'Express.js', link: 'https://expressjs.com/' },
-      { title: 'MongoDB', link: 'https://www.mongodb.com/' },
-      { title: 'Mongoose', link: 'https://mongoosejs.com/' },
+      { title: 'React' },
+      { title: 'Node.js' },
+      { title: 'Express.js' },
+      { title: 'MongoDB' },
+      { title: 'Mongoose' },
       {
         title: 'CSS',
         link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
@@ -34,16 +34,14 @@ const playgroundData = [
     techList: [
       {
         title: 'JavaScript',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
       },
       {
         title: 'CSS',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
       },
-      { title: 'Heroku', link: 'https://www.heroku.com/' },
-      { title: 'MongoDB', link: 'https://www.mongodb.com/' },
-      { title: 'Express.js', link: 'https://expressjs.com/' },
-      { title: 'Node.js', link: 'https://nodejs.org/en' },
+      { title: 'Heroku' },
+      { title: 'MongoDB' },
+      { title: 'Express.js' },
+      { title: 'Node.js' },
       {
         title: 'Twinword API',
         link: 'https://www.twinword.com/api/sentiment-analysis.php',
@@ -60,19 +58,10 @@ const playgroundData = [
     imagePath: '/images/mancala.png',
     imageAlt: 'Mancala Landing Page',
     techList: [
-      {
-        title: 'JavaScript',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-      },
-      {
-        title: 'HTML',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-      },
-      {
-        title: 'CSS',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-      },
-      { title: 'Github Pages', link: 'https://pages.github.com/' },
+      { title: 'JavaScript' },
+      { title: 'HTML' },
+      { title: 'CSS' },
+      { title: 'Github Pages' },
     ],
     liveLink: 'https://hicass.github.io/mancala/',
     repoLink: 'https://github.com/hicass/mancala',
@@ -85,19 +74,10 @@ const playgroundData = [
     imagePath: '/images/tictactoe.png',
     imageAlt: 'Tic Tac Toe Landing Page',
     techList: [
-      {
-        title: 'JavaScript',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-      },
-      {
-        title: 'HTML',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-      },
-      {
-        title: 'CSS',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-      },
-      { title: 'Github Pages', link: 'https://pages.github.com/' },
+      { title: 'JavaScript' },
+      { title: 'HTML' },
+      { title: 'CSS' },
+      { title: 'Github Pages' },
     ],
     liveLink: 'https://hicass.github.io/Tic-Tac-Toe/',
     repoLink: 'https://github.com/hicass/Tic-Tac-Toe',
