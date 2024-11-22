@@ -89,19 +89,7 @@ body {
 
 @media screen and (max-width: 1205px) {
   .parallax-boops {
-    top: -25%;
-  }
-}
-
-@media screen and (max-width: 1105px) {
-  .parallax-boops {
-    top: -20%;
-  }
-}
-
-@media screen and (max-width: 882px) {
-  .parallax-boops {
-    top: -50%;
+    opacity: 0;
   }
 }
 
