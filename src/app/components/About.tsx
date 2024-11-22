@@ -34,7 +34,7 @@ const About: FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             key={idx}
-            className="text-xl"
+            className="text-2xl"
           >
             {p}
           </motion.p>

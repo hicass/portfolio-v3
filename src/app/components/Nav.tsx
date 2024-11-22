@@ -90,7 +90,7 @@ const Nav: FC = () => {
               <a
                 href={link.href}
                 target="_blank"
-                className="text-beige hover:text-white text-2xl"
+                className="text-beige hover:text-white text-3xl"
               >
                 <link.icon />
               </a>
