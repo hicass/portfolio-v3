@@ -1,4 +1,5 @@
-import { FC } from 'react';
+'use client';
+import { FC, useState, useEffect } from 'react';
 
 import Hero from './components/Hero/Hero';
 import About from './components/About';
@@ -9,34 +10,68 @@ import Playground from './components/Projects/Playground';
 import Contact from './components/Contact/Contact';
 
 const LandingPage: FC = () => {
-  return (
-    <main>
-      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)] parallax-wrapper">
-        <Hero />
-        <Nav />
+  const [activeView, setActiveView] = useState('about');
+  const [isMobileScreen, setIsMobileScreen] = useState<boolean | null>(null);
 
-        <div className="w-full flex flex-col items-center -mt-10 md:mt-10">
-          <div className="mx-4 sm:w-3/4 md:w-[60%] lg:max-w-3xl lg:w-full xl:max-w-4xl flex flex-col gap-28 md:gap-48">
-            <About />
-            <Tech />
-            <Projects />
-            <Playground />
-            <Contact />
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileScreen(window.innerWidth < 770);
+    };
+
+    // Set initial screen size only on the client
+    setIsMobileScreen(window.innerWidth < 770);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  function renderView() {
+    switch (activeView) {
+      case 'about':
+        return <About />;
+      case 'tech':
+        return <Tech />;
+      case 'projects':
+        return <Projects />;
+      case 'playground':
+        return <Playground />;
+      case 'contact':
+        return <Contact />;
+      default:
+        return <p>Not Found...</p>;
+    }
+  }
+
+  if (!isMobileScreen) {
+    return (
+      <main>
+        <div className="flex flex-row justify-between h-screen 2xl:justify-around overflow-y-hidden overflow-x-hidden p-12 md:gap-16 text-white font-[family-name:var(--font-satoshi)]">
+          <div className="min-w-fit justify-start h-full relative">
+            <Hero />
+            <Nav activeView={activeView} setActiveView={setActiveView} />
           </div>
 
-          <p className="p-2 px-4 text-md text-beige-2 text-center">
-            Built and designed by yours truly, using Next.js and a handful of
-            other technologies. Check out the{' '}
-            <a
-              href="https://github.com/hicass/portfolio-v3"
-              target="_blank"
-              className="text-beige hover:text-white hover:cursor-pointer"
-            >
-              source code
-            </a>{' '}
-            to learn more.
-          </p>
+          <div className="w-full max-w-4xl overflow-y-scroll z-10">
+            {renderView()}
+          </div>
         </div>
+      </main>
+    );
+  }
+
+  return (
+    <main>
+      <div className="flex flex-col p-6 gap-16 text-white font-[family-name:var(--font-satoshi)]">
+          <Hero />
+
+          <About />
+          <Tech />
+          <Projects />
+          <Playground />
+          <Contact />
       </div>
     </main>
   );
