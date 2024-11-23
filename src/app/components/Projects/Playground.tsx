@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
 const playgroundData = [
   {
@@ -87,22 +88,25 @@ const playgroundData = [
 const Projects: FC = () => {
   return (
     <section className="flex flex-col items-center relative">
-      <span
-        id="playground"
-        className="absolute -top-20 opacity-0"
-        aria-hidden="true"
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
-        Invisible Nav Anchor
-      </span>
-      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
         playground
-      </h2>
+      </motion.h2>
 
-      <p className="w-full mt-10 text-2xl">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full mt-4 body-txt"
+      >
         My little corner for trying out new tech and building fun projects :)
-      </p>
+      </motion.p>
 
-      <div className="flex flex-col items-center gap-16 mt-10">
+      <div className="flex flex-col items-center gap-10 mt-6">
         {playgroundData.map((p, idx) => (
           <ProjectCard project={p} key={idx} />
         ))}

@@ -13,20 +13,21 @@ const techData = [
   { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
   { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
   { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
-  { name: 'TypeScript', icon: SiTypescript, link: 'https://www.typescriptlang.org/' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, link: 'https://tailwindcss.com/' },
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: SiTailwindcss,
+    link: 'https://tailwindcss.com/',
+  },
 ];
 
 const Tech: FC = () => {
   return (
-    <section className="flex flex-col items-center relative">
-      <span
-        id="tech"
-        className="absolute -top-20 opacity-0"
-        aria-hidden="true"
-      >
-        Invisible Nav Anchor
-      </span>
+    <section className="flex flex-col relative">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -36,19 +37,28 @@ const Tech: FC = () => {
         tech
       </motion.h2>
 
-      <div className="flex flex-row flex-wrap md:justify-center md:w-2/3 gap-6 md:gap-24 mt-10">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full mt-4 body-txt"
+      >
+        Here are some of the technologies I have had the pleasure to work with.
+      </motion.p>
+
+      <div className="flex flex-row flex-wrap justify-center xl:justify-start gap-12 md:gap-20 mt-10">
         {techData.map((tech, idx) => (
           <motion.a
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center gap-4 text-7xl"
+            className="flex flex-col items-center gap-2 text-5xl"
             href={tech.link}
-            target='_blank'
+            target="_blank"
             key={idx}
           >
             <tech.icon />
-            <p className="text-xl">{tech.name}</p>
+            <p className="body-txt-sm">{tech.name}</p>
           </motion.a>
         ))}
       </div>
