@@ -6,11 +6,12 @@ import ContactForm from './ContactForm';
 
 const Contact: FC = () => {
   return (
-    <section className="flex flex-col items-center relative mb-24">
+    <section className="flex flex-col mr-12 pt-20 pb-12 items-center relative mb-24">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         Contact
@@ -20,6 +21,7 @@ const Contact: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="flex flex-col gap-4 w-full mt-4"
       >
         <p className="body-txt">

@@ -25,7 +25,7 @@ const projectData = [
   {
     title: 'RAMResume',
     description:
-      "As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. (Currently in development—email me for login access!)",
+      'As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. (Currently in development—email me for login access!)',
     date: 'July 2024 - Present',
     imagePath: '/images/ramresume.png',
     imageAlt: 'RAMResume Landing Page',
@@ -66,11 +66,12 @@ const projectData = [
 
 const Projects: FC = () => {
   return (
-    <section className="flex flex-col items-center relative">
+    <section className="flex flex-col mr-12 pt-20 pb-12 items-center relative">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         projects
@@ -80,6 +81,7 @@ const Projects: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full mt-4 body-txt"
       >
         Take a look at some of the projects I&apos;ve been involved in.

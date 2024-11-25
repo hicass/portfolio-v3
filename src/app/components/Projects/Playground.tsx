@@ -87,11 +87,12 @@ const playgroundData = [
 
 const Projects: FC = () => {
   return (
-    <section className="flex flex-col items-center relative">
+    <section className="flex flex-col mr-12 pt-20 pb-12 items-center relative">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         playground
@@ -101,6 +102,7 @@ const Projects: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full mt-4 body-txt"
       >
         My little corner for trying out new tech and building fun projects :)

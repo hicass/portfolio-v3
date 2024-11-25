@@ -11,11 +11,12 @@ const aboutData = [
 
 const About: FC = () => {
   return (
-    <section className="">
+    <section className="mr-12 pt-20 pb-12">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="font-[family-name:var(--font-universal-expansion)]"
       >
         hi im cass
@@ -27,6 +28,7 @@ const About: FC = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             key={idx}
             className="body-txt"
           >

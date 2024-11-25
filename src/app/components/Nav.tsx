@@ -73,7 +73,11 @@ const Nav: FC<NavProps> = ({ activeView, setActiveView }) => {
             <li key={idx}>
               <button
                 onClick={() => setActiveView(link.view)}
-                className={`${activeView === link.view ? 'text-white text-2xl': 'text-beige'} hover:text-2xl hover:text-white`}
+                className={`${
+                  activeView === link.view
+                    ? 'text-white text-2xl'
+                    : 'text-beige'
+                } hover:text-2xl hover:text-white`}
               >
                 {link.text}
               </button>
@@ -90,7 +94,7 @@ const Nav: FC<NavProps> = ({ activeView, setActiveView }) => {
           once: true,
           amount: 0.4,
         }}
-        className="flex-row w-fit absolute bottom-0"
+        className="flex-row w-fit absolute bottom-28"
       >
         <ul className="flex gap-4">
           {navData.socialLinks.map((link, idx) => (

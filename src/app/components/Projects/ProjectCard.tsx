@@ -51,7 +51,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           once: true,
           amount: 0.05,
         }}
-        className="project-card flex flex-col w-full md:w-[24rem] lg:w-[27rem] xl:w-full gap-4 xl:gap-4 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40"
+        className="project-card flex flex-col w-full lg:w-[27rem] xl:w-full gap-4 xl:gap-4 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40"
       >
         {/* Top Section */}
         <div className="flex flex-col w-full xl:flex-row gap-4 xl:gap-6">
@@ -70,7 +70,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <div className="flex flex-col gap-2 xl:gap-4 xl:w-1/2">
             <header className="flex justify-between">
               <h4 className="body-txt">{project.title}</h4>
-              <div className='project-arrow'>
+              <div className="project-arrow">
                 <MdOutlineArrowOutward />
               </div>
             </header>

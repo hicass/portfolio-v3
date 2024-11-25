@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import Projects from './components/Projects/Projects';
 import Playground from './components/Projects/Playground';
 import Contact from './components/Contact/Contact';
+import DrawnBackground from './components/Hero/DrawnBackground';
 
 const LandingPage: FC = () => {
   const [activeView, setActiveView] = useState('about');
@@ -47,9 +48,10 @@ const LandingPage: FC = () => {
 
   if (!isMobileScreen) {
     return (
-      <main>
-        <div className="flex flex-row justify-between h-screen 2xl:justify-around overflow-y-hidden overflow-x-hidden p-12 md:gap-16 text-white font-[family-name:var(--font-satoshi)]">
-          <div className="min-w-fit justify-start h-full relative">
+      <main className="relative">
+        <DrawnBackground />
+        <div className="flex flex-row justify-between h-screen 2xl:justify-around overflow-y-hidden overflow-x-hidden md:gap-16 text-white font-[family-name:var(--font-satoshi)]">
+          <div className="min-w-fit mx-12 mt-20 justify-start h-full relative">
             <Hero />
             <Nav activeView={activeView} setActiveView={setActiveView} />
           </div>
@@ -65,13 +67,13 @@ const LandingPage: FC = () => {
   return (
     <main>
       <div className="flex flex-col p-6 gap-16 text-white font-[family-name:var(--font-satoshi)]">
-          <Hero />
+        <Hero />
 
-          <About />
-          <Tech />
-          <Projects />
-          <Playground />
-          <Contact />
+        <About />
+        <Tech />
+        <Projects />
+        <Playground />
+        <Contact />
       </div>
     </main>
   );

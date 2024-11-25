@@ -27,11 +27,12 @@ const techData = [
 
 const Tech: FC = () => {
   return (
-    <section className="flex flex-col relative">
+    <section className="flex flex-col mr-12 pt-20 pb-12 relative">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         tech
@@ -41,6 +42,7 @@ const Tech: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full mt-4 body-txt"
       >
         Here are some of the technologies I have had the pleasure to work with.
