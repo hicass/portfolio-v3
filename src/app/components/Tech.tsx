@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { SiTypescript } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
@@ -25,13 +25,29 @@ const techData = [
   },
 ];
 
+const slideVariants: Variants = {
+  offscreen: {
+    x: -200,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
+
 const Tech: FC = () => {
   return (
     <motion.section
       className="flex flex-col items-center relative border-r border-orange"
-      initial={{ opacity: 0, x: -200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      variants={slideVariants}
+      initial="offscreen"
+      whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}
     >
       <span id="tech" className="absolute -top-20 opacity-0" aria-hidden="true">
