@@ -2,13 +2,9 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import HeroBackground from './HeroBackground';
-
 const Hero: FC = () => {
   return (
     <motion.header className="flex flex-col items-center relative w-full hero">
-      <HeroBackground />
-
       <motion.div
         className="flex flex-col mx-4 md:max-w-4xl gap-4 md:gap-8 h-screen justify-center -mt-28 md:-mt-10"
         initial={{ opacity: 0 }}

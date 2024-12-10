@@ -7,11 +7,13 @@ import Nav from './components/Nav';
 import Projects from './components/Projects/Projects';
 import Playground from './components/Projects/Playground';
 import Contact from './components/Contact/Contact';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const LandingPage: FC = () => {
   return (
     <main>
-      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)] parallax-wrapper">
+      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
+        <AnimatedBackground />
         <Hero />
         <Nav />
 

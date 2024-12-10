@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --white: #f6f2f0;
-  --beige: #b7aa9b;
-  --beige-2: #8c7e6d;
-  --brown: #433c35;
-  --dark-brown-1: #1b1a1a;
-  --dark-brown-2: #2b2929;
-  --bg-black-1: #080808;
-  --bg-black-2: #0b0a0a;
-  --bg-black-3: #171515;
+  --beige: #ef8645;
+  --beige-2: #7c8c6d;
+  --brown: #162525;
+  --dark-brown-1: #0b1718;
+  --dark-brown-2: #112224;
+  --orb-outer: #032819;
+  --orb-inner: #522e17;
+  --orb-center: #ad551d;
+  --background: #001112;
 }
 
 *,
@@ -27,11 +27,7 @@ h2 {
 }
 
 body {
-  background: linear-gradient(75deg, var(--bg-black-1), var(--bg-black-3),
-      var(--bg-black-2), var(--bg-black-3), var(--bg-black-1));
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  transition: all 0.4s;
+  background-color: var(--background);
 }
 
 @layer utilities {
@@ -40,45 +36,126 @@ body {
   }
 }
 
-/* ------ Hero Parallax ------- */
-.parallax-wrapper {
-  perspective: 15px;
+/* Animated Background */
+#background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  z-index: -1;
 }
 
-.hero {
-  transform-style: preserve-3d;
-  transition: all 0.9s;
-}
-
-.parallax-boops {
+#background::before,
+#background::after {
   position: absolute;
   left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100vh;
   z-index: -1;
-  transition: all 0.9s;
+  opacity: 35%;
 }
 
-#parallax-top-boops {
-  -ms-transform: translateZ(-10px) scale(2);
-  -webkit-transform: translateZ(-10px) scale(2);
-  -moz-transform: translateZ(-10px) scale(2);
-  -o-transform: translateZ(-10px) scale(2);
-  transform: translateZ(-10px) scale(1.6);
+#background::after {
+  background: #000000;
+  filter: url(#noiseFilter);
+  z-index: 2;
+  opacity: 15%;
 }
 
-#parallax-top-tendrils1 {
-  -ms-transform: translateZ(-15px) scale(2.6);
-  -webkit-transform: translateZ(-15px) scale(2.6);
-  -moz-transform: translateZ(-15px) scale(2.6);
-  -o-transform: translateZ(-15px) scale(2.6);
-  transform: translateZ(-15px) scale(2);
+/* orb Container */
+#orb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
 }
 
-#parallax-top-tendrils2 {
-  -ms-transform: translateZ(-17px) scale(2.8);
-  -webkit-transform: translateZ(-17px) scale(2.8);
-  -moz-transform: translateZ(-17px) scale(2.8);
-  -o-transform: translateZ(-17px) scale(2.8);
-  transform: translateZ(-17px) scale(2.2);
+/* orbs */
+.orb {
+  filter: blur(30px);
+  position: absolute;
+  z-index: 1;
+  animation: orb-anim 15s infinite linear;
+}
+
+.orb-outer {
+  background-color: var(--orb-outer);
+  border-radius: 600px;
+  opacity: 20%;
+  height: 700px;
+  width: 700px;
+}
+
+.orb-inner {
+  background-color: var(--orb-inner);
+  border-radius: 400px;
+  opacity: 10%;
+  height: 400px;
+  width: 400px;
+}
+
+.orb-center {
+  background-color: var(--orb-center);
+  border-radius: 200px;
+  opacity: 10%;
+  height: 200px;
+  width: 200px;
+}
+
+#orb-left {
+  bottom: -350px;
+  left: -250px;
+}
+
+#orb-left-inner {
+  bottom: -200px;
+  left: -100px;
+}
+
+#orb-left-center {
+  bottom: -150px;
+  left: -50px;
+}
+
+#orb-right {
+  top: -350px;
+  right: -250px;
+}
+
+#orb-right-inner {
+  top: -200px;
+  right: -100px;
+}
+
+#orb-right-center {
+  top: -150px;
+  right: -50px;
+}
+
+/* Combined Keyframes */
+@keyframes orb-anim {
+  0% {
+    transform: translate(-20px, -60px);
+  }
+  25% {
+    transform: translate(20px, -40px);
+  }
+  50% {
+    transform: translate(40px, 0px);
+  }
+  75% {
+    transform: translate(20px, 40px);
+  }
+  100% {
+    transform: translate(-20px, -60px);
+  }
 }
 
 @media screen and (max-width: 1400px) {
