@@ -42,6 +42,7 @@ const projectData = [
     ],
     liveLink: 'https://www.ramresume.com/',
   },
+  // Temporarily remove this project as its currently being updated
   // {
   //   title: 'Custom CMS for a Private Blog',
   //   description:
