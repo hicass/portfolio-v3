@@ -66,7 +66,7 @@ const projectData = [
 
 const Projects: FC = () => {
   return (
-    <section className="flex flex-col items-center relative">
+    <section className="flex flex-col items-center relative border-b border-orange pb-6">
       <span
         id="projects"
         className="absolute -top-20 opacity-0"

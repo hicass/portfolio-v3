@@ -10,7 +10,7 @@ const aboutData = [
 
 const About: FC = () => {
   return (
-    <section className="relative">
+    <section className="relative border-l border-orange pl-6">
       <span
         id="about"
         className="absolute -top-20 opacity-0"
