@@ -32,7 +32,7 @@ const Tech: FC = () => {
       initial={{ opacity: 0, x: -200 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <span id="tech" className="absolute -top-20 opacity-0" aria-hidden="true">
         Invisible Nav Anchor

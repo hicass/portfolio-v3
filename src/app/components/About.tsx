@@ -12,10 +12,10 @@ const About: FC = () => {
   return (
     <motion.section
       className="relative border-l border-orange pl-6"
-      initial={{ opacity: 0, x: 200 }}
+      initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once:true, amount: 0.5 }}
+      viewport={{ once:true, amount: 0.1 }}
     >
       <span
         id="about"
