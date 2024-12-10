@@ -79,6 +79,7 @@ const Projects: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         projects
@@ -88,6 +89,7 @@ const Projects: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full mt-10 text-2xl"
       >
         Take a look at some of the projects I&apos;ve been involved in.
