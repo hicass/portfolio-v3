@@ -1,5 +1,7 @@
+'use client';
 import { FC } from 'react';
 import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
 const playgroundData = [
   {
@@ -61,15 +63,25 @@ const Projects: FC = () => {
         aria-hidden="true"
       >
         Invisible Nav Anchor
-      </span>
-      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
+      </span>{' '}
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full font-[family-name:var(--font-universal-expansion)]"
+      >
         playground
-      </h2>
-
-      <p className="w-full mt-10 text-2xl">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full mt-10 text-2xl"
+      >
         My little corner for trying out new tech and building fun projects :)
-      </p>
-
+      </motion.p>
       <div className="flex flex-col items-center gap-16 mt-10">
         {playgroundData.map((p, idx) => (
           <ProjectCard project={p} key={idx} />

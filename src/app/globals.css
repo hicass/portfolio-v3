@@ -160,3 +160,13 @@ body {
     transform: translate(-20px, -60px);
   }
 }
+
+@media (min-width: 770px) {
+  .project-arrow {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .project-card:hover .project-arrow {
+    transform: translate(5px, -5px);
+  }
+}

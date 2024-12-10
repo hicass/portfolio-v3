@@ -45,7 +45,7 @@ const About: FC = () => {
         about me
       </h2>
 
-      <div className="flex flex-col gap-6 mt-10">
+      <div className="flex flex-col gap-6 mt-4">
         {aboutData.map((p, idx) => (
           <p key={idx} className="text-2xl">
             {p}
