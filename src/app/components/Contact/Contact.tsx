@@ -37,7 +37,7 @@ const Contact: FC = () => {
 
         <a
           href="mailto:hicass.dev@gmail.com"
-          className="w-fit text-lg text-beige hover:text-white hover:cursor-pointer"
+          className="w-fit text-lg text-orange hover:cursor-pointer"
         >
           hicass.dev@gmail.com
         </a>

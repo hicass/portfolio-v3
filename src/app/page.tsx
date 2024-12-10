@@ -26,13 +26,13 @@ const LandingPage: FC = () => {
             <Contact />
           </div>
 
-          <p className="p-2 px-4 text-md text-beige-2 text-center">
+          <p className="p-2 px-4 text-md text-white text-center">
             Built and designed by yours truly, using Next.js and a handful of
             other technologies. Check out the{' '}
             <a
               href="https://github.com/hicass/portfolio-v3"
               target="_blank"
-              className="text-beige hover:text-white hover:cursor-pointer"
+              className="text-orange hover:cursor-pointer"
             >
               source code
             </a>{' '}

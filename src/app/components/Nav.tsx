@@ -66,7 +66,7 @@ const Nav: FC = () => {
         <ul className="flex flex-col items-end">
           {navData.pageLinks.map((link, idx) => (
             <li key={idx}>
-              <a href={link.href} className="text-beige hover:text-white">
+              <a href={link.href} className="text-white hover:text-orange">
                 {link.text}
               </a>
             </li>
@@ -90,7 +90,7 @@ const Nav: FC = () => {
               <a
                 href={link.href}
                 target="_blank"
-                className="text-beige hover:text-white text-3xl"
+                className="text-white hover:text-orange text-3xl"
               >
                 <link.icon />
               </a>

@@ -4,11 +4,10 @@
 
 :root {
   --white: #f6f2f0;
-  --beige: #ef8645;
-  --beige-2: #7c8c6d;
-  --brown: #162525;
-  --dark-brown-1: #0b1718;
-  --dark-brown-2: #112224;
+  --orange: #ef8645;
+  --blue: #162525;
+  --dark-blue-1: #0b1718;
+  --dark-blue-2: #0f1e20;
   --orb-outer: #032819;
   --orb-inner: #522e17;
   --orb-center: #ad551d;
