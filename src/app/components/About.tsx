@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 
 const aboutData = [
-  'I am a Software Developer who weaves code and dreams into tangible realities.',
   'With a diverse background, I bring a unique perspective and an adaptable, fast-learning approach to every project. I am passionate about creating elegant and expressive digital experiences, delivering creative, high-quality solutions with a strong emphasis on scalability and maintainability.',
   'To me, coding is an art form where every line has the potential to blend creativity and technology into something impactful. I value visual appeal, attention to detail, and the power of innovative design to craft memorable user experiences.',
   'Beyond the code, I am an artist at heart, expressing myself through digital mediums. I also enjoy connecting with nature, spending quality time with my dog and partner, and immersing myself in the worlds of video games to recharge and find inspiration.',
