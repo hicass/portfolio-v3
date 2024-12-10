@@ -138,7 +138,7 @@ body {
   right: -50px;
 }
 
-/* Combined Keyframes */
+/* Keyframes */
 @keyframes orb-anim {
   0% {
     transform: translate(-20px, -60px);
@@ -154,43 +154,5 @@ body {
   }
   100% {
     transform: translate(-20px, -60px);
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .parallax-boops {
-    top: -5%;
-  }
-}
-
-@media screen and (max-width: 1205px) {
-  .parallax-boops {
-    top: -25%;
-  }
-}
-
-@media screen and (max-width: 1105px) {
-  .parallax-boops {
-    top: -20%;
-  }
-}
-
-@media screen and (max-width: 882px) {
-  .parallax-boops {
-    top: -50%;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
   }
 }

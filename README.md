@@ -74,11 +74,14 @@
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | White | ![#f6f2f0](https://via.placeholder.com/10/f6f2f0f?text=+) #f6f2f0|
-| Beige | ![#b7aa9b](https://via.placeholder.com/10/b7aa9b?text=+) #b7aa9b |
-| Beige 2 | ![#8c7e6d](https://via.placeholder.com/10/8c7e6d?text=+) #8c7e6d |
-| Brown | ![#433c35](https://via.placeholder.com/10/433c35?text=+) #433c35 |
-| Dark Brown 1 | ![#1b1a1a](https://via.placeholder.com/10/1b1a1a?text=+) #1b1a1a |
-| Dark Brown 2 | ![#2b2929](https://via.placeholder.com/10/2b2929?text=+) #2b2929 |
+| Orange | ![#ef8645](https://via.placeholder.com/10/ef8645?text=+) #ef8645 |
+| Blue | ![#162525](https://via.placeholder.com/10/162525?text=+) #162525 |
+| Dark Blue 1 | ![#0b1718](https://via.placeholder.com/10/0b1718?text=+) #0b1718 |
+| Dark Blue 2 | ![#0f1e20](https://via.placeholder.com/10/0f1e20?text=+) #0f1e20 |
+| Orb Outer | ![#032819](https://via.placeholder.com/10/032819?text=+) #032819 |
+| Orb Inner | ![#522e17](https://via.placeholder.com/10/522e17?text=+) #522e17 |
+| Orb Center | ![#ad551d](https://via.placeholder.com/10/ad551d?text=+) #ad551d |
+| Background | ![#001112](https://via.placeholder.com/10/001112?text=+) #001112 |
 
 
 #### There is subtle gradient animation for the background that uses the following colors:

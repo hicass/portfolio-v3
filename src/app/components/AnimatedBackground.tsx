@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const AnimatedBackground: FC = () => {
   return (
-    <div id="background" className="border">
+    <div id="background">
       <div id="orb-container">
         <div id="orb-left" className="orb orb-outer"></div>
         <div id="orb-left-inner" className="orb orb-inner"></div>
