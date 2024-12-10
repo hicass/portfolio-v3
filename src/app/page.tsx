@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import Hero from './components/Hero/Hero';
+import Hero from './components/Hero';
 import About from './components/About';
 import Tech from './components/Tech';
 import Nav from './components/Nav';
