@@ -141,7 +141,7 @@ const ContactForm: FC = () => {
           <input
             type="submit"
             value="Send"
-            className="py-1 px-2 border-[1px] border-blue w-fit rounded-lg text-white hover:bg-dark-blue-2 hover:text-orange hover:cursor-pointer hover:border-orange"
+            className="py-1 px-2 border-[1px] border-blue w-fit rounded text-white hover:bg-dark-blue-2 hover:text-orange hover:cursor-pointer hover:border-orange"
           />
         </div>
       </form>
