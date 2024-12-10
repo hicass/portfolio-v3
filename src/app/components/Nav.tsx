@@ -20,13 +20,13 @@ const slideInLVars: Variants = {
   },
 };
 
-const slideUpVars: Variants = {
+const slideInRVars: Variants = {
   offscreen: {
-    y: 30,
+    x: 10,
     opacity: 0,
   },
   onscreen: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       type: 'spring',
@@ -42,23 +42,39 @@ const navData = {
     { icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/cass-walters/' },
   ],
   pageLinks: [
-    { text: 'about me', view: 'about' },
-    { text: 'tech', view: 'tech' },
-    { text: 'projects', view: 'projects' },
-    { text: 'playground', view: 'playground' },
-    { text: 'contact', view: 'contact' },
+    { text: 'about me', href: '#about' },
+    { text: 'tech', href: '#tech' },
+    { text: 'projects', href: '#projects' },
+    { text: 'playground', href: '#playground' },
+    { text: 'contact', href: '#contact' },
   ],
 };
 
-interface NavProps {
-  activeView: string;
-  setActiveView: (data: string) => void;
-}
-
-const Nav: FC<NavProps> = ({ activeView, setActiveView }) => {
+const Nav: FC = () => {
   return (
     <>
       <motion.nav
+        variants={slideInRVars}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{
+          once: true,
+          amount: 0.4,
+        }}
+        className="hidden md:flex flex-row w-full justify-end sticky top-5 -mt-36 px-8 pb-2 text-xl"
+      >
+        <ul className="flex flex-col items-end">
+          {navData.pageLinks.map((link, idx) => (
+            <li key={idx}>
+              <a href={link.href} className="text-white hover:text-orange">
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </motion.nav>
+
+      <motion.aside
         variants={slideInLVars}
         initial="offscreen"
         whileInView="onscreen"
@@ -66,43 +82,15 @@ const Nav: FC<NavProps> = ({ activeView, setActiveView }) => {
           once: true,
           amount: 0.4,
         }}
-        className="mt-12 flex flex-row w-full lg:w-fit pr-6 text-xl"
+        className="hidden md:flex flex-row w-fit sticky top-6 -mt-24 px-8"
       >
-        <ul className="flex w-full justify-between flex-col">
-          {navData.pageLinks.map((link, idx) => (
-            <li key={idx}>
-              <button
-                onClick={() => setActiveView(link.view)}
-                className={`${
-                  activeView === link.view
-                    ? 'text-white text-2xl'
-                    : 'text-beige'
-                } hover:text-2xl hover:text-white`}
-              >
-                {link.text}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </motion.nav>
-
-      <motion.aside
-        variants={slideUpVars}
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{
-          once: true,
-          amount: 0.4,
-        }}
-        className="flex-row w-fit absolute bottom-28"
-      >
-        <ul className="flex gap-4">
+        <ul className="flex flex-col gap-4">
           {navData.socialLinks.map((link, idx) => (
             <li key={idx}>
               <a
                 href={link.href}
                 target="_blank"
-                className="text-beige hover:text-white text-3xl"
+                className="text-white hover:text-orange text-3xl"
               >
                 <link.icon />
               </a>

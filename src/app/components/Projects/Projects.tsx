@@ -25,7 +25,7 @@ const projectData = [
   {
     title: 'RAMResume',
     description:
-      'As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. (Currently in development—email me for login access!)',
+      "As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. Starting from scratch, I contributed to the app's design by creating responsive wireframes in Figma to ensure a seamless user experience. (Currently in development—email me for login access!)",
     date: 'July 2024 - Present',
     imagePath: '/images/ramresume.png',
     imageAlt: 'RAMResume Landing Page',
@@ -42,6 +42,7 @@ const projectData = [
     ],
     liveLink: 'https://www.ramresume.com/',
   },
+  // Temporarily remove this project as its currently being updated
   // {
   //   title: 'Custom CMS for a Private Blog',
   //   description:
@@ -66,12 +67,18 @@ const projectData = [
 
 const Projects: FC = () => {
   return (
-    <section className="flex flex-col mr-12 pt-20 pb-12 items-center relative">
+    <section className="flex flex-col items-center relative border-b border-orange pb-6">
+      <span
+        id="projects"
+        className="absolute -top-20 opacity-0"
+        aria-hidden="true"
+      >
+        Invisible Nav Anchor
+      </span>
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         projects
@@ -81,13 +88,12 @@ const Projects: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="w-full mt-4 body-txt"
+        className="w-full mt-10 text-2xl"
       >
         Take a look at some of the projects I&apos;ve been involved in.
       </motion.p>
 
-      <div className="flex flex-col items-center gap-10 mt-6">
+      <div id="projects" className="flex flex-col items-center gap-16 mt-10">
         {projectData.map((p, idx) => (
           <ProjectCard project={p} key={idx} />
         ))}

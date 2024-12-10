@@ -91,7 +91,7 @@ const ContactForm: FC = () => {
         ref={form}
         onSubmit={sendEmail}
         noValidate
-        className="flex flex-col gap-4 p-4 w-full md:w-[24rem] lg:w-[27rem] rounded-lg mt-2 border-t-[1px] border-t-brown bg-dark-brown-1"
+        className="flex flex-col gap-4 p-4 w-full sm:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2 rounded-lg mt-2 border-t-[1px] border-t-blue bg-dark-blue-1"
       >
         <div className="flex flex-col gap-2">
           <label className="text-lg">Name</label>
@@ -102,7 +102,7 @@ const ContactForm: FC = () => {
             onChange={(e) =>
               setFormValues({ ...formValues, name: e.target.value })
             }
-            className="p-2 text-md bg-dark-brown-1 focus:bg-dark-brown-2 rounded border-[1px] border-brown focus:outline-none"
+            className="p-2 text-md bg-dark-blue-1 rounded border-[0.1px] focus:border-orange border-blue focus:outline-none"
           />
         </div>
 
@@ -113,7 +113,7 @@ const ContactForm: FC = () => {
             name="from_name"
             value={formValues.email}
             onChange={(e) => handleEmail(e)}
-            className="p-2 text-md bg-dark-brown-1 focus:bg-dark-brown-2 rounded border-[1px] border-brown focus:outline-none"
+            className="p-2 text-md bg-dark-blue-1 rounded border-[0.1px] focus:border-orange border-blue focus:outline-none"
           />
 
           {/* Email Validator Message */}
@@ -133,7 +133,7 @@ const ContactForm: FC = () => {
               setFormValues({ ...formValues, message: e.target.value })
             }
             rows={3}
-            className="p-2 text-md bg-dark-brown-1 focus:bg-dark-brown-2 rounded border-[1px] border-brown focus:outline-none"
+            className="p-2 text-md bg-dark-blue-1 rounded border-[0.1px] focus:border-orange border-blue focus:outline-none"
           />
         </div>
 
@@ -141,7 +141,7 @@ const ContactForm: FC = () => {
           <input
             type="submit"
             value="Send"
-            className="py-1 px-2 border-[1px] border-brown w-fit rounded-lg text-beige hover:bg-dark-brown-2 hover:text-white hover:cursor-pointer"
+            className="py-1 px-2 border-[1px] border-blue w-fit rounded text-white hover:bg-dark-blue-2 hover:text-orange hover:cursor-pointer hover:border-orange"
           />
         </div>
       </form>

@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { SiTypescript } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
@@ -25,46 +25,55 @@ const techData = [
   },
 ];
 
+const slideVariants: Variants = {
+  offscreen: {
+    x: -200,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
+
 const Tech: FC = () => {
   return (
-    <section className="flex flex-col mr-12 pt-20 pb-12 relative">
-      <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="w-full font-[family-name:var(--font-universal-expansion)]"
-      >
+    <motion.section
+      className="flex flex-col items-center relative border-r border-orange"
+      variants={slideVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <span id="tech" className="absolute -top-20 opacity-0" aria-hidden="true">
+        Invisible Nav Anchor
+      </span>
+      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
         tech
-      </motion.h2>
+      </h2>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="w-full mt-4 body-txt"
-      >
-        Here are some of the technologies I have had the pleasure to work with.
-      </motion.p>
-
-      <div className="flex flex-row flex-wrap justify-center xl:justify-start gap-12 md:gap-20 mt-10">
+      <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-20 mt-10">
         {techData.map((tech, idx) => (
           <motion.a
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center gap-2 text-5xl"
+            className="flex flex-col items-center gap-4 text-5xl"
             href={tech.link}
             target="_blank"
             key={idx}
           >
             <tech.icon />
-            <p className="body-txt-sm">{tech.name}</p>
+            <p className="text-xl">{tech.name}</p>
           </motion.a>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

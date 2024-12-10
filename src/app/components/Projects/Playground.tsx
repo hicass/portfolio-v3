@@ -1,3 +1,4 @@
+'use client';
 import { FC } from 'react';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
@@ -51,43 +52,18 @@ const playgroundData = [
     liveLink: 'https://chirpcw.herokuapp.com/',
     repoLink: 'https://github.com/hicass/chirp',
   },
-  {
-    title: 'Mancala',
-    description:
-      'This project was my second endeavor in web development, demonstrating my growing expertise and passion for crafting interactive experiences. Two players take turns strategically distributing the number of pebbles contained inside each of the pits counter-clockwise around the board, until there is a winner.',
-    date: 'April 2023',
-    imagePath: '/images/mancala.png',
-    imageAlt: 'Mancala Landing Page',
-    techList: [
-      { title: 'JavaScript' },
-      { title: 'HTML' },
-      { title: 'CSS' },
-      { title: 'Github Pages' },
-    ],
-    liveLink: 'https://hicass.github.io/mancala/',
-    repoLink: 'https://github.com/hicass/mancala',
-  },
-  {
-    title: 'Tic Tac Toe',
-    description:
-      'This was my inaugural project, a Tic Tac Toe game that marked the beginning of my web development journey. A modern electronic rendition of the classic board game, the objective is to be the first to form a horizontal, vertical, or diagonal line of three of your markers, thereby securing victory.',
-    date: 'April 2023',
-    imagePath: '/images/tictactoe.png',
-    imageAlt: 'Tic Tac Toe Landing Page',
-    techList: [
-      { title: 'JavaScript' },
-      { title: 'HTML' },
-      { title: 'CSS' },
-      { title: 'Github Pages' },
-    ],
-    liveLink: 'https://hicass.github.io/Tic-Tac-Toe/',
-    repoLink: 'https://github.com/hicass/Tic-Tac-Toe',
-  },
 ];
 
 const Projects: FC = () => {
   return (
-    <section className="flex flex-col mr-12 pt-20 pb-12 items-center relative">
+    <section className="flex flex-col items-center relative border-b border-orange pb-6">
+      <span
+        id="playground"
+        className="absolute -top-20 opacity-0"
+        aria-hidden="true"
+      >
+        Invisible Nav Anchor
+      </span>{' '}
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -97,18 +73,16 @@ const Projects: FC = () => {
       >
         playground
       </motion.h2>
-
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="w-full mt-4 body-txt"
+        className="w-full mt-10 text-2xl"
       >
         My little corner for trying out new tech and building fun projects :)
       </motion.p>
-
-      <div className="flex flex-col items-center gap-10 mt-6">
+      <div className="flex flex-col items-center gap-16 mt-10">
         {playgroundData.map((p, idx) => (
           <ProjectCard project={p} key={idx} />
         ))}

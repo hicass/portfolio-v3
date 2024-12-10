@@ -1,79 +1,44 @@
-'use client';
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 
-import Hero from './components/Hero/Hero';
+import Hero from './components/Hero';
 import About from './components/About';
 import Tech from './components/Tech';
 import Nav from './components/Nav';
 import Projects from './components/Projects/Projects';
 import Playground from './components/Projects/Playground';
 import Contact from './components/Contact/Contact';
-import DrawnBackground from './components/Hero/DrawnBackground';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const LandingPage: FC = () => {
-  const [activeView, setActiveView] = useState('about');
-  const [isMobileScreen, setIsMobileScreen] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileScreen(window.innerWidth < 770);
-    };
-
-    // Set initial screen size only on the client
-    setIsMobileScreen(window.innerWidth < 770);
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  function renderView() {
-    switch (activeView) {
-      case 'about':
-        return <About />;
-      case 'tech':
-        return <Tech />;
-      case 'projects':
-        return <Projects />;
-      case 'playground':
-        return <Playground />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <p>Not Found...</p>;
-    }
-  }
-
-  if (!isMobileScreen) {
-    return (
-      <main className="relative">
-        <DrawnBackground />
-        <div className="flex flex-row justify-between h-screen 2xl:justify-around overflow-y-hidden overflow-x-hidden md:gap-16 text-white font-[family-name:var(--font-satoshi)]">
-          <div className="min-w-fit mx-12 mt-20 justify-start h-full relative">
-            <Hero />
-            <Nav activeView={activeView} setActiveView={setActiveView} />
-          </div>
-
-          <div className="w-full max-w-4xl overflow-y-scroll z-10">
-            {renderView()}
-          </div>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <main>
-      <div className="flex flex-col p-6 gap-16 text-white font-[family-name:var(--font-satoshi)]">
+      <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
+        <AnimatedBackground />
         <Hero />
+        <Nav />
 
-        <About />
-        <Tech />
-        <Projects />
-        <Playground />
-        <Contact />
+        <div className="w-full flex flex-col items-center -mt-10 md:mt-14">
+          <div className="mx-4 sm:w-3/4 md:w-[60%] lg:max-w-3xl lg:w-full xl:max-w-4xl flex flex-col gap-28 md:gap-52">
+            <About />
+            <Tech />
+            <Projects />
+            <Playground />
+            <Contact />
+          </div>
+
+          <p className="p-2 px-4 text-md text-white text-center">
+            Built and designed by yours truly, using Next.js and a handful of
+            other technologies. Check out the{' '}
+            <a
+              href="https://github.com/hicass/portfolio-v3"
+              target="_blank"
+              className="text-orange hover:cursor-pointer"
+            >
+              source code
+            </a>{' '}
+            to learn more.
+          </p>
+        </div>
       </div>
     </main>
   );

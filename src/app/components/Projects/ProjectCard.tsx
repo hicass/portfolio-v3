@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 
 import Image from 'next/image';
-import { MdOutlineArrowOutward } from 'react-icons/md';
 
 type Project = {
   title: string;
@@ -34,7 +33,7 @@ const cardVariants: Variants = {
     opacity: 1,
     transition: {
       type: 'spring',
-      bounce: 0.4,
+      bounce: 0.3,
       duration: 0.8,
     },
   },
@@ -49,13 +48,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         whileInView="onscreen"
         viewport={{
           once: true,
-          amount: 0.05,
+          amount: 0.1,
         }}
-        className="project-card flex flex-col w-full lg:w-[27rem] xl:w-full gap-4 xl:gap-4 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-brown bg-dark-brown-1 md:hover:border-t-brown md:bg-transparent md:hover:bg-dark-brown-1 z-40"
+        className="flex flex-col w-full gap-6 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-blue bg-dark-blue-1 md:hover:border-t-blue md:bg-transparent md:hover:bg-dark-blue-1 z-40"
       >
         {/* Top Section */}
-        <div className="flex flex-col w-full xl:flex-row gap-4 xl:gap-6">
-          <figure className="w-full xl:w-1/2">
+        <div className="flex flex-col w-full lg:flex-row gap-6">
+          <figure className="w-full lg:w-1/2">
             {/* Image that showcases the project */}
             <Image
               src={project.imagePath}
@@ -67,36 +66,33 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </figure>
 
           {/* Information about the project */}
-          <div className="flex flex-col gap-2 xl:gap-4 xl:w-1/2">
+          <div className="flex flex-col gap-4 lg:w-1/2">
             <header className="flex justify-between">
-              <h4 className="body-txt">{project.title}</h4>
-              <div className="project-arrow">
-                <MdOutlineArrowOutward />
-              </div>
+              <h4 className="text-2xl">{project.title}</h4>
             </header>
 
-            <p className="body-txt-sm">{project.description}</p>
+            <p className="text-lg">{project.description}</p>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col xl:flex-row items-start gap-4 xl:gap-6">
-          <div className="flex gap-4 w-full xl:w-1/2">
-            <p className="text-lg">{project.date}</p>
-          </div>
-
-          <div className="w-full xl:w-1/2">
+        <div className="flex flex-col lg:flex-row items-end gap-6">
+          <div className="w-full lg:w-1/2">
             <ul className="flex flex-wrap gap-2">
               {project.techList.map((tech, idx) => (
                 // What technologies were used
                 <li
                   key={idx}
-                  className="py-1 px-2 rounded h-fit text-sm bg-dark-brown-2"
+                  className="py-1 px-2 rounded h-fit text-sm bg-dark-blue-2"
                 >
                   {tech.title}
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="flex md:justify-end gap-4 w-full lg:w-1/2">
+            <p className="text-lg">{project.date}</p>
           </div>
         </div>
       </motion.article>
