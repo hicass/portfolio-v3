@@ -10,7 +10,13 @@ const aboutData = [
 
 const About: FC = () => {
   return (
-    <section className="relative border-l border-orange pl-6">
+    <motion.section
+      className="relative border-l border-orange pl-6"
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once:true, amount: 0.5 }}
+    >
       <span
         id="about"
         className="absolute -top-20 opacity-0"
@@ -18,29 +24,21 @@ const About: FC = () => {
       >
         Invisible Nav Anchor
       </span>
-      <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="font-[family-name:var(--font-universal-expansion)]"
-      >
+      <h2 className="font-[family-name:var(--font-universal-expansion)]">
         about me
-      </motion.h2>
+      </h2>
 
       <div className="flex flex-col gap-6 mt-10">
         {aboutData.map((p, idx) => (
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+          <p
             key={idx}
             className="text-2xl"
           >
             {p}
-          </motion.p>
+          </p>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

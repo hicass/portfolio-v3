@@ -27,18 +27,19 @@ const techData = [
 
 const Tech: FC = () => {
   return (
-    <section className="flex flex-col items-center relative border-r border-orange">
+    <motion.section
+      className="flex flex-col items-center relative border-r border-orange"
+      initial={{ opacity: 0, x: -200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <span id="tech" className="absolute -top-20 opacity-0" aria-hidden="true">
         Invisible Nav Anchor
       </span>
-      <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="w-full font-[family-name:var(--font-universal-expansion)]"
-      >
+      <h2 className="w-full font-[family-name:var(--font-universal-expansion)]">
         tech
-      </motion.h2>
+      </h2>
 
       <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-20 mt-10">
         {techData.map((tech, idx) => (
@@ -56,7 +57,7 @@ const Tech: FC = () => {
           </motion.a>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
