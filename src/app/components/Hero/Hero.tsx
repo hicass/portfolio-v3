@@ -13,9 +13,9 @@ const Hero: FC = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col gap-4 md:gap-8 relative">
+        <div className="flex flex-col gap-6 md:gap-8 relative">
           <motion.div
-            className="absolute -top-16 right-14"
+            className="absolute -top-20 right-2 md:-top-16 md:right-14"
             animate={{
               rotate: [-10, 10, -10],
             }}
