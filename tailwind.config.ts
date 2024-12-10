@@ -11,9 +11,9 @@ const config: Config = {
       colors: {
         white: 'var(--white)',
         'orange': 'var(--orange)',
-        'blue': 'var(--blue)',
-        'dark-blue-1': 'var(--dark-blue-1)',
-        'dark-blue-2': 'var(--dark-blue-2)',
+        'green': 'var(--green)',
+        'dark-green-1': 'var(--dark-green-1)',
+        'dark-green-2': 'var(--dark-green-2)',
       },
     },
   },
