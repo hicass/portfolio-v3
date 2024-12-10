@@ -18,6 +18,7 @@ const Contact: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="w-full font-[family-name:var(--font-universal-expansion)]"
       >
         Contact
@@ -27,6 +28,7 @@ const Contact: FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="flex flex-col gap-4 w-full mt-10 "
       >
         <p className="text-xl">

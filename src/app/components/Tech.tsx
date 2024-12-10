@@ -59,10 +59,7 @@ const Tech: FC = () => {
 
       <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-20 mt-10">
         {techData.map((tech, idx) => (
-          <motion.a
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+          <a
             className="flex flex-col items-center gap-4 text-5xl"
             href={tech.link}
             target="_blank"
@@ -70,7 +67,7 @@ const Tech: FC = () => {
           >
             <tech.icon />
             <p className="text-xl">{tech.name}</p>
-          </motion.a>
+          </a>
         ))}
       </div>
     </motion.section>
