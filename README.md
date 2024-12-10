@@ -78,19 +78,16 @@
 | Blue | ![#162525](https://via.placeholder.com/10/162525?text=+) #162525 |
 | Dark Blue 1 | ![#0b1718](https://via.placeholder.com/10/0b1718?text=+) #0b1718 |
 | Dark Blue 2 | ![#0f1e20](https://via.placeholder.com/10/0f1e20?text=+) #0f1e20 |
-| Orb Outer | ![#032819](https://via.placeholder.com/10/032819?text=+) #032819 |
-| Orb Inner | ![#522e17](https://via.placeholder.com/10/522e17?text=+) #522e17 |
-| Orb Center | ![#ad551d](https://via.placeholder.com/10/ad551d?text=+) #ad551d |
 | Background | ![#001112](https://via.placeholder.com/10/001112?text=+) #001112 |
 
 
-#### There is subtle gradient animation for the background that uses the following colors:
+#### There are orbs in the background that are comprised of outer, inner and center divs to help smoothen the gradient, they use the following colors:
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Black 1 | ![#080808](https://via.placeholder.com/10/080808?text=+) #080808|
-| Black 2 | ![#0b0a0a](https://via.placeholder.com/10/0b0a0a?text=+) #0b0a0a |
-| Black 3 | ![#171515](https://via.placeholder.com/10/171515?text=+) #171515 |
+| Orb Outer | ![#032819](https://via.placeholder.com/10/032819?text=+) #032819 |
+| Orb Inner | ![#522e17](https://via.placeholder.com/10/522e17?text=+) #522e17 |
+| Orb Center | ![#ad551d](https://via.placeholder.com/10/ad551d?text=+) #ad551d |
 
 ## Font Reference
 
