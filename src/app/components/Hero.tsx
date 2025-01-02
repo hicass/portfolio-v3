@@ -15,7 +15,7 @@ const Hero: FC = () => {
       >
         <div className="flex flex-col gap-6 md:gap-8 relative">
           <motion.div
-            className="absolute -top-20 right-2 md:-top-16 md:right-14"
+            className="absolute -top-10 sm:-top-20 right-2 md:-top-16 md:right-14"
             animate={{
               rotate: [-10, 10, -10],
             }}
