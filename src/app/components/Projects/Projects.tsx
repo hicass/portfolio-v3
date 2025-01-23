@@ -25,7 +25,7 @@ const projectData = [
   {
     title: 'RAMResume',
     description:
-      "As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality. Starting from scratch, I contributed to the app's design by creating responsive wireframes in Figma to ensure a seamless user experience. (Currently in development—email me for login access!)",
+      "As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality (Currently in development—email me for login access!)",
     date: 'July 2024 - Present',
     imagePath: '/images/ramresume.png',
     imageAlt: 'RAMResume Landing Page',
@@ -45,7 +45,7 @@ const projectData = [
   {
     title: 'Custom CMS for a Private Blog',
     description:
-      'I built a custom CMS for a client seeking a secure and private online blog. The project prioritized privacy, security, and user-friendly functionality, tailored to their unique needs. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
+      'I built a custom CMS for a client seeking a secure and private online blog. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
     date: 'August 2024',
     imagePath: '/images/private-blog.png',
     imageAlt: 'Tag Operations Landing Page',
