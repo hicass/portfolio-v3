@@ -42,27 +42,26 @@ const projectData = [
     ],
     liveLink: 'https://www.ramresume.com/',
   },
-  // Temporarily remove this project as its currently being updated
-  // {
-  //   title: 'Custom CMS for a Private Blog',
-  //   description:
-  //     'I built a custom CMS for a client seeking a secure and private online blog. The project prioritized privacy, security, and user-friendly functionality, tailored to their unique needs. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
-  //   date: 'August 2024',
-  //   imagePath: '/images/private-blog.png',
-  //   imageAlt: 'Tag Operations Landing Page',
-  //   techList: [
-  //     { title: 'Next.js' },
-  //     { title: 'Tailwind CSS' },
-  //     { title: 'Jest' },
-  //     { title: 'Framer Motion' },
-  //     { title: 'Next Auth' },
-  //     { title: 'Prisma' },
-  //     { title: 'PostgreSQL' },
-  //     { title: 'TinyMCE' },
-  //     { title: 'MUI Component Library' },
-  //   ],
-  //   liveLink: 'https://private-blog-demo.vercel.app/admin',
-  // },
+  {
+    title: 'Custom CMS for a Private Blog',
+    description:
+      'I built a custom CMS for a client seeking a secure and private online blog. The project prioritized privacy, security, and user-friendly functionality, tailored to their unique needs. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
+    date: 'August 2024',
+    imagePath: '/images/private-blog.png',
+    imageAlt: 'Tag Operations Landing Page',
+    techList: [
+      { title: 'Next.js' },
+      { title: 'Tailwind CSS' },
+      { title: 'Jest' },
+      { title: 'Framer Motion' },
+      { title: 'Next Auth' },
+      { title: 'Prisma' },
+      { title: 'PostgreSQL' },
+      { title: 'TinyMCE' },
+      { title: 'MUI Component Library' },
+    ],
+    liveLink: 'https://private-blog-demo.vercel.app/admin',
+  },
 ];
 
 const Projects: FC = () => {
