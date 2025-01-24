@@ -6,12 +6,6 @@
   --white: #f6e8e2;
   --orange: #ef8645;
   --green: #24372a;
-  --dark-green-1: #111f1b;
-  --dark-green-2: #192c26;
-  --orb-outer: #0c412c;
-  --orb-inner: #914618;
-  --orb-center: #ef8645;
-  --background: #081712;
 }
 
 @layer utilities {
