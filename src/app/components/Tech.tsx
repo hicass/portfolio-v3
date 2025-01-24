@@ -2,27 +2,26 @@
 import { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 
-import { SiTypescript } from 'react-icons/si';
-import { SiTailwindcss } from 'react-icons/si';
+import { SiTypescript, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { BiLogoNodejs } from 'react-icons/bi';
 import { FaReact, FaGitAlt } from 'react-icons/fa';
 
 const techData = [
-  { name: 'React', icon: FaReact, link: 'https://react.dev/' },
-  { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
-  { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
-  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
   {
     name: 'TypeScript',
     icon: SiTypescript,
     link: 'https://www.typescriptlang.org/',
   },
+  { name: 'React', icon: FaReact, link: 'https://react.dev/' },
+  { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
+  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
   {
-    name: 'Tailwind CSS',
-    icon: SiTailwindcss,
-    link: 'https://tailwindcss.com/',
+    name: 'PostgreSQL',
+    icon: SiPostgresql,
+    link: 'https://www.postgresql.org/',
   },
+  { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
 ];
 
 const slideVariants: Variants = {
@@ -60,7 +59,7 @@ const Tech: FC = () => {
       <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-20 mt-10">
         {techData.map((tech, idx) => (
           <a
-            className="flex flex-col items-center gap-4 text-5xl"
+            className="flex flex-col items-center gap-4 text-5xl hover:text-orange"
             href={tech.link}
             target="_blank"
             key={idx}
