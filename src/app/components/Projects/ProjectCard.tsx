@@ -68,9 +68,9 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
 
           {/* Information about the project */}
           <div className="flex flex-col gap-4 lg:w-1/2">
-            <header className="flex justify-between group-hover:text-orange">
+            <header className="flex justify-between">
               <h4 className="text-2xl">{project.title}</h4>
-              <MdOutlineArrowOutward className='transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2'/>
+              <MdOutlineArrowOutward className='transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:text-orange'/>
             </header>
 
             <p className="text-lg">{project.description}</p>
