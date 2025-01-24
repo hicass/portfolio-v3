@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --white: #f6f2f0;
+  --white: #f6e8e2;
   --orange: #ef8645;
   --green: #24372a;
   --dark-green-1: #111f1b;
@@ -95,7 +95,7 @@ body {
 .orb-inner {
   background-color: var(--orb-inner);
   border-radius: 400px;
-  opacity: 14%;
+  opacity: 10%;
   height: 400px;
   width: 400px;
 }
@@ -103,7 +103,7 @@ body {
 .orb-center {
   background-color: var(--orb-center);
   border-radius: 200px;
-  opacity: 14%;
+  opacity: 10%;
   height: 200px;
   width: 200px;
 }
