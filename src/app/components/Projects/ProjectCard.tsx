@@ -51,7 +51,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           once: true,
           amount: 0.1,
         }}
-        className="flex flex-col w-full gap-4 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-green bg-dark-green-1 md:hover:border-t-green md:bg-transparent md:hover:bg-dark-green-1 z-40"
+        className="flex flex-col w-full gap-4 p-4 rounded-lg border-t-[1px] md:border-t-transparent border-t-slate-50/10 bg-slate-50/[3%] md:hover:border-t-slate-50/10 md:bg-transparent md:hover:bg-slate-50/[3%] z-40"
       >
         {/* Top Section */}
         <div className="flex flex-col w-full lg:flex-row gap-6">
@@ -85,7 +85,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                 // What technologies were used
                 <li
                   key={idx}
-                  className="py-1 px-2 rounded h-fit text-sm bg-dark-green-2"
+                  className="py-1 px-2 rounded h-fit text-sm bg-slate-50/[5%]"
                 >
                   {tech.title}
                 </li>
