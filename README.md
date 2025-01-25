@@ -73,21 +73,9 @@
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| White | ![#f6f2f0](https://via.placeholder.com/10/f6f2f0f?text=+) #f6f2f0|
-| Orange | ![#ef8645](https://via.placeholder.com/10/ef8645?text=+) #ef8645 |
-| Green | ![#24372a](https://via.placeholder.com/10/24372a?text=+) #24372a |
-| Dark Green 1 | ![#111f1b](https://via.placeholder.com/10/111f1b?text=+) #111f1b |
-| Dark Green 2 | ![#192c26](https://via.placeholder.com/10/192c26?text=+) #192c26 |
-| Background | ![#081712](https://via.placeholder.com/10/081712?text=+) #081712 |
-
-
-#### There are orbs in the background that are comprised of outer, inner and center divs to help smoothen the gradient, they use the following colors:
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Orb Outer | ![#0c412c](https://via.placeholder.com/10/0c412c?text=+) #0c412c |
-| Orb Inner | ![#914618](https://via.placeholder.com/10/914618?text=+) #914618 |
-| Orb Center | ![#ef8645](https://via.placeholder.com/10/ef8645?text=+) #ef8645 |
+| White | #f6e8e2|
+| Orange | #ef8645 |
+| Green | #24372a |
 
 ## Font Reference
 
@@ -102,3 +90,7 @@
 - **Font Name:** Satoshi
 - **Usage:** Body text
 - **Link:** [Fontshare Satoshi](https://www.fontshare.com/fonts/satoshi)
+
+## Background
+
+<p>The mesh gradient background was created using <a href="https://www.mshr.app/" target="_blank">mshr</a>

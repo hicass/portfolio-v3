@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import Hero from './components/Hero';
 import About from './components/About';
 import Tech from './components/Tech';
@@ -7,13 +6,12 @@ import Nav from './components/Nav';
 import Projects from './components/Projects/Projects';
 import Playground from './components/Projects/Playground';
 import Contact from './components/Contact/Contact';
-import AnimatedBackground from './components/AnimatedBackground';
+import './mesh-gradient.css';
 
 const LandingPage: FC = () => {
   return (
     <main>
       <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
-        <AnimatedBackground />
         <Hero />
         <Nav />
 

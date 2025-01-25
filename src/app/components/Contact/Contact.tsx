@@ -1,19 +1,11 @@
 'use client';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-
 import ContactForm from './ContactForm';
 
 const Contact: FC = () => {
   return (
-    <section className="flex flex-col items-center relative mb-24">
-      <span
-        id="contact"
-        className="absolute -top-20 opacity-0"
-        aria-hidden="true"
-      >
-        Invisible Nav Anchor
-      </span>
+    <section id="contact" className="flex flex-col items-center relative mb-24 scroll-m-36">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
