@@ -1,9 +1,7 @@
 'use client';
 import { useRef, useState, FC } from 'react';
-
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
-
 import { BsSendCheck } from 'react-icons/bs';
 
 const ContactForm: FC = () => {
@@ -44,8 +42,6 @@ const ContactForm: FC = () => {
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    console.log('Sending email');
 
     if (form.current) {
       console.log('Form current');
