@@ -103,6 +103,23 @@ export const projectData = [
 
 export const playgroundData = [
   {
+    title: 'Ask Away',
+    description:
+      'Ask Away is a demo Q&A page I built to explore creating animations with pure CSS versus using animation libraries. It’s a playful, non-functional site designed to test motion, layout, and user experience—all while keeping things accessible and kid-friendly.',
+    date: 'November 2024',
+    imagePath: '/images/ask-away.png',
+    imageAlt: 'Ask Away Landing Page',
+    techList: [
+      { title: 'React' },
+      { title: 'Next.js' },
+      { title: 'Sanity' },
+      { title: 'TypeScript' },
+      { title: 'Tailwind CSS' },
+      { title: 'CSS' },
+    ],
+    liveLink: 'https://ask-away-one.vercel.app/',
+  },
+  {
     title: 'Whiskered Grapes Co.',
     description:
       'Whiskered Grapes Co. is a digital space for a whimsical wine venture, managed by the fictional "Pepperoni family." Who stand out for their quirky ingredients of beards and oregano. I conceived this project to delve deeper into the world of React, simultaneously honing my frontend skills.',
