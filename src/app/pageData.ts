@@ -46,7 +46,7 @@ export const projectData = [
     title: 'Tag Operations',
     description:
       "Solely designed and developed a modern, user-friendly website for Tag Ops, a company specializing in operational support. I created a responsive and engaging design that aligns with the company's personality.",
-    date: 'December 2023 - Present',
+    date: 'August 2023 - Present',
     imagePath: '/images/tagops.png',
     imageAlt: 'Tag Operations Landing Page',
     techList: [
@@ -62,8 +62,8 @@ export const projectData = [
   {
     title: 'RAMResume',
     description:
-      'As a founding engineer, I collaborate closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality (Currently in development—email me for login access!)',
-    date: 'July 2024 - Present',
+      'As a founding engineer, I collaborated closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality (Currently in development—email me for login access!)',
+    date: 'July 2024 - Feb 2025',
     imagePath: '/images/ramresume.png',
     imageAlt: 'RAMResume Landing Page',
     techList: [
