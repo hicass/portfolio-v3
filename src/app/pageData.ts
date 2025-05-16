@@ -45,19 +45,21 @@ export const projectData = [
   {
     title: 'Tag Operations',
     description:
-      "Solely designed and developed a modern, user-friendly website for Tag Ops, a company specializing in operational support. I created a responsive and engaging design that aligns with the company's personality.",
+      "Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.",
     date: 'August 2023 - Present',
     imagePath: '/images/tagops.png',
     imageAlt: 'Tag Operations Landing Page',
     techList: [
       { title: 'Next.js' },
-      { title: 'Tailwind CSS' },
-      { title: 'Email.js' },
-      { title: 'Framer Motion' },
+      { title: 'React' },
+      { title: 'TypeScript' },
+      { title: 'CSS' },
+      { title: 'Google Analytics' },
+      { title: 'Pipedrive' },
+      { title: 'Sanity' },
       { title: 'Vercel' },
     ],
     liveLink: 'https://www.tagoperations.com/',
-    repoLink: 'https://github.com/hicass/tag-ops-v3',
   },
   {
     title: 'RAMResume',
@@ -118,53 +120,5 @@ export const playgroundData = [
       { title: 'CSS' },
     ],
     liveLink: 'https://ask-away-one.vercel.app/',
-  },
-  {
-    title: 'Whiskered Grapes Co.',
-    description:
-      'Whiskered Grapes Co. is a digital space for a whimsical wine venture, managed by the fictional "Pepperoni family." Who stand out for their quirky ingredients of beards and oregano. I conceived this project to delve deeper into the world of React, simultaneously honing my frontend skills.',
-    date: 'October 2023',
-    imagePath: '/images/wgc.png',
-    imageAlt: 'Whiskered Grapes Co Landing Page',
-    techList: [
-      { title: 'React' },
-      { title: 'Node.js' },
-      { title: 'Express.js' },
-      { title: 'MongoDB' },
-      { title: 'Mongoose' },
-      {
-        title: 'CSS',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-      },
-      { title: 'Heroku', link: 'https://www.heroku.com/' },
-    ],
-    liveLink: 'https://whiskered-grapes-co-9786d5309a36.herokuapp.com/',
-    repoLink: 'https://github.com/hicass/whiskered-grapes-co',
-  },
-  {
-    title: 'Chirp',
-    description:
-      'Chirp is a Twitter mock app specifically for complaining. It uses an emotion analysis API to accept or reject posts based on complaint-like sentiments. I developed and designed this project during my coding bootcamp, conquering the challenge of building it in just five days.',
-    date: 'May 2023',
-    imagePath: '/images/chirp.png',
-    imageAlt: 'Chirp Landing Page',
-    techList: [
-      {
-        title: 'JavaScript',
-      },
-      {
-        title: 'CSS',
-      },
-      { title: 'Heroku' },
-      { title: 'MongoDB' },
-      { title: 'Express.js' },
-      { title: 'Node.js' },
-      {
-        title: 'Twinword API',
-        link: 'https://www.twinword.com/api/sentiment-analysis.php',
-      },
-    ],
-    liveLink: 'https://chirpcw.herokuapp.com/',
-    repoLink: 'https://github.com/hicass/chirp',
   },
 ];
