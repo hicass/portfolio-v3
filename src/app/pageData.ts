@@ -18,12 +18,6 @@ export const navData = {
   ],
 };
 
-export const aboutData = [
-  'With a diverse background, I bring a unique perspective and an adaptable, fast-learning approach to every project. I am passionate about creating elegant and expressive digital experiences, delivering creative, high-quality solutions with a strong emphasis on scalability and maintainability.',
-  'To me, coding is an art form where every line has the potential to blend creativity and technology into something impactful. I value visual appeal, attention to detail, and the power of innovative design to craft memorable user experiences.',
-  'Beyond the code, I am an artist at heart, expressing myself through digital mediums. I also enjoy connecting with nature, spending quality time with my dog and partner, and immersing myself in the worlds of video games to recharge and find inspiration.',
-];
-
 export const techData = [
   {
     name: 'TypeScript',
@@ -45,7 +39,7 @@ export const projectData = [
   {
     title: 'Tag Operations',
     description:
-      "Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.",
+      'Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.',
     date: 'August 2023 - Present',
     imagePath: '/images/tagops.png',
     imageAlt: 'Tag Operations Landing Page',

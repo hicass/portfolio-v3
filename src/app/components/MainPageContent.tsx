@@ -6,8 +6,9 @@ import Projects from './Projects/Projects';
 import Playground from './Projects/Playground';
 import Contact from './Contact/Contact';
 import './mesh-gradient.css';
+import { MainPageContentProps } from '@/types';
 
-const MainPageContent = () => {
+const MainPageContent = ({ aboutData }: MainPageContentProps) => {
   return (
     <main>
       <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
@@ -16,7 +17,7 @@ const MainPageContent = () => {
 
         <div className="w-full flex flex-col items-center -mt-10 md:mt-14">
           <div className="mx-4 sm:w-3/4 md:w-[60%] lg:max-w-3xl lg:w-full xl:max-w-4xl flex flex-col gap-28 md:gap-52">
-            <About />
+            <About {...aboutData} />
             <Tech />
             <Projects />
             <Playground />

@@ -1,7 +1,10 @@
+import { client } from '@/sanity/lib/client';
 import MainPageContent from './components/MainPageContent';
 
-const MainPage = () => {
-  return <MainPageContent />;
-};
+export default async function MainPage() {
+  const AboutData = await client.fetch(`*[_type == "about"][0]`);
 
-export default MainPage;
+  console.log(AboutData);
+  
+  return <MainPageContent aboutData={AboutData} />;
+};

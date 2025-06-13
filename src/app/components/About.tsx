@@ -1,16 +1,10 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInFastFR } from '../utils/animations';
-import { aboutData } from '@/app/pageData';
+import { AboutData } from '@/types';
+import { PortableText } from 'next-sanity';
 
-const About: FC = () => {
-  const aboutParagraphElements = aboutData.map((p, idx) => (
-    <p key={idx} className="text-2xl">
-      {p}
-    </p>
-  ));
-
+const About = ({ bio }: AboutData) => {
   return (
     <motion.section
       id="about"
@@ -24,7 +18,9 @@ const About: FC = () => {
         about me
       </h2>
 
-      <div className="flex flex-col gap-6 mt-4">{aboutParagraphElements}</div>
+      <div className="flex flex-col gap-6 mt-10 text-2xl">
+        <PortableText value={bio} />
+      </div>
     </motion.section>
   );
 };
