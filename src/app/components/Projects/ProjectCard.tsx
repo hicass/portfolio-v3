@@ -31,7 +31,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     techListElements = project.techList.map((tech, idx) => (
       <li
         key={idx}
-        className="py-1 px-2 rounded h-fit text-sm bg-slate-50/[5%]"
+        className="py-1 px-2 rounded h-fit text-sm border-t-[1px] border-t-slate-50/10 bg-slate-50/[5%]"
       >
         {tech.title}
       </li>
