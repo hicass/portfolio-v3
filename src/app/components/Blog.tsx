@@ -12,7 +12,7 @@ const Blog: FC = () => {
   return (
     <section
       id="blog"
-      className="flex flex-col items-center relative border-b border-orange pb-6 scroll-m-20"
+      className="flex flex-col items-center relative border-b border-orange pb-6 scroll-m-36"
     >
       <motion.h2
         initial={{ opacity: 0 }}
