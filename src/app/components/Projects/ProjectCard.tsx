@@ -8,10 +8,10 @@ import { slideUpFast } from '@/app/utils/animations';
 type Project = {
   title: string;
   description: string;
-  date: string;
+  date?: string;
   imagePath: string;
   imageAlt: string;
-  techList: ProjectTech[];
+  techList?: ProjectTech[];
   liveLink: string;
   repoLink?: string;
 };
@@ -25,11 +25,18 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
-  const techListElements = project.techList.map((tech, idx) => (
-    <li key={idx} className="py-1 px-2 rounded h-fit text-sm bg-slate-50/[5%]">
-      {tech.title}
-    </li>
-  ));
+  let techListElements;
+
+  if (project.techList) {
+    techListElements = project.techList.map((tech, idx) => (
+      <li
+        key={idx}
+        className="py-1 px-2 rounded h-fit text-sm bg-slate-50/[5%]"
+      >
+        {tech.title}
+      </li>
+    ));
+  }
 
   return (
     <a
@@ -63,7 +70,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           {/* Information about the project */}
           <div className="flex flex-col gap-4 lg:w-1/2">
             <header className="flex justify-between">
-              <h4 className="text-2xl">{project.title}</h4>
+              <h4 className="text-2xl w-[90%]">{project.title}</h4>
               <MdOutlineArrowOutward className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:text-orange" />
             </header>
 
