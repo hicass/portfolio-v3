@@ -31,7 +31,7 @@ const Blog: FC = () => {
         viewport={{ once: true }}
         className="w-full mt-10 text-2xl"
       >
-        Check out my reflections, thoughts and insights!
+        Check out my reflections, thoughts, and insights.
       </motion.p>
 
       <div id="projects" className="flex flex-col items-center gap-16 mt-10">
