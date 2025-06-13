@@ -4,9 +4,10 @@ import About from './About';
 import Tech from './Tech';
 import Projects from './Projects/Projects';
 import Playground from './Projects/Playground';
+import Blog from './Blog';
 import Contact from './Contact/Contact';
-import './mesh-gradient.css';
 import { MainPageContentProps } from '@/types';
+import './mesh-gradient.css';
 
 const MainPageContent = ({ aboutData }: MainPageContentProps) => {
   return (
@@ -20,6 +21,7 @@ const MainPageContent = ({ aboutData }: MainPageContentProps) => {
             <About {...aboutData} />
             <Tech />
             <Projects />
+            <Blog />
             <Playground />
             <Contact />
           </div>

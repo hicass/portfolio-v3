@@ -13,11 +13,13 @@ export const navData = {
     { text: 'about me', href: '#about' },
     { text: 'tech', href: '#tech' },
     { text: 'projects', href: '#projects' },
+    { text: 'blog', href: '#blog' },
     { text: 'playground', href: '#playground' },
     { text: 'contact', href: '#contact' },
   ],
 };
 
+// TODO: Move to Sanity
 export const techData = [
   {
     name: 'TypeScript',
@@ -35,6 +37,7 @@ export const techData = [
   { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
 ];
 
+// TODO: Move to Sanity
 export const projectData = [
   {
     title: 'Tag Operations',
@@ -97,6 +100,7 @@ export const projectData = [
   },
 ];
 
+// TODO: Move to Sanity
 export const playgroundData = [
   {
     title: 'Ask Away',
@@ -114,5 +118,20 @@ export const playgroundData = [
       { title: 'CSS' },
     ],
     liveLink: 'https://ask-away-one.vercel.app/',
+  },
+];
+
+// TODO: Move to Sanity
+export const blogData = [
+  {
+    title:
+      'How Building the Same Website Three Times Made Me a Better Developer',
+    description:
+      'I rebuilt the same website three times, each version reflecting my growth as a developer. In this article, I share what I learned and how the project helped me grow, covering everything from React basics to optimizing design, performance, discoverability, accessibility, and maintainability.',
+    imagePath: '/images/blog-1.png',
+    imageAlt:
+      'An image of the title of the article with a before and after of the website',
+    liveLink:
+      'https://www.linkedin.com/pulse/how-building-same-website-three-times-made-me-better-cass-walters-uhv3c/?trackingId=JdJSG0tiSMecUZOAVHZL5g%3D%3D',
   },
 ];
