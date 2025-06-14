@@ -13,17 +13,13 @@ export const navData = {
     { text: 'about me', href: '#about' },
     { text: 'tech', href: '#tech' },
     { text: 'projects', href: '#projects' },
+    { text: 'blog', href: '#blog' },
     { text: 'playground', href: '#playground' },
     { text: 'contact', href: '#contact' },
   ],
 };
 
-export const aboutData = [
-  'With a diverse background, I bring a unique perspective and an adaptable, fast-learning approach to every project. I am passionate about creating elegant and expressive digital experiences, delivering creative, high-quality solutions with a strong emphasis on scalability and maintainability.',
-  'To me, coding is an art form where every line has the potential to blend creativity and technology into something impactful. I value visual appeal, attention to detail, and the power of innovative design to craft memorable user experiences.',
-  'Beyond the code, I am an artist at heart, expressing myself through digital mediums. I also enjoy connecting with nature, spending quality time with my dog and partner, and immersing myself in the worlds of video games to recharge and find inspiration.',
-];
-
+// TODO: Move to Sanity
 export const techData = [
   {
     name: 'TypeScript',
@@ -41,11 +37,12 @@ export const techData = [
   { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
 ];
 
+// TODO: Move to Sanity
 export const projectData = [
   {
     title: 'Tag Operations',
     description:
-      "Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.",
+      'Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.',
     date: 'August 2023 - Present',
     imagePath: '/images/tagops.png',
     imageAlt: 'Tag Operations Landing Page',
@@ -103,6 +100,7 @@ export const projectData = [
   },
 ];
 
+// TODO: Move to Sanity
 export const playgroundData = [
   {
     title: 'Ask Away',
@@ -120,5 +118,20 @@ export const playgroundData = [
       { title: 'CSS' },
     ],
     liveLink: 'https://ask-away-one.vercel.app/',
+  },
+];
+
+// TODO: Move to Sanity
+export const blogData = [
+  {
+    title:
+      'How Building the Same Website Three Times Made Me a Better Developer',
+    description:
+      'I rebuilt the same website three times, each version reflecting my growth as a developer. In this article, I share what I learned and how the project helped me grow, covering everything from React basics to optimizing design, performance, discoverability, accessibility, and maintainability.',
+    imagePath: '/images/blog-1.png',
+    imageAlt:
+      'An image of the title of the article with a before and after of the website',
+    liveLink:
+      'https://www.linkedin.com/pulse/how-building-same-website-three-times-made-me-better-cass-walters-uhv3c/?trackingId=JdJSG0tiSMecUZOAVHZL5g%3D%3D',
   },
 ];
