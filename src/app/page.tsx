@@ -7,7 +7,5 @@ export default async function MainPage() {
   const AboutData = await client.fetch(`*[_type == "about"][0]`);
   const BlogData = await client.fetch(`*[_type == "blog"]`);
 
-  console.log(BlogData);
-
   return <MainPageContent aboutData={AboutData} blogData={BlogData} />;
 }
