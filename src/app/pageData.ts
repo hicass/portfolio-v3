@@ -1,8 +1,13 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { SiTypescript, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
+import { SiExpress } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
 import { BiLogoNodejs } from 'react-icons/bi';
-import { FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiJest } from 'react-icons/si';
+import { SiPrisma } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
+import { BiSolidFileCss } from 'react-icons/bi';
 import { Project } from '@/types';
 
 export const navData = {
@@ -27,15 +32,27 @@ export const techData = [
     icon: SiTypescript,
     link: 'https://www.typescriptlang.org/',
   },
+  {
+    name: 'CSS',
+    icon: BiSolidFileCss,
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  },
   { name: 'React', icon: FaReact, link: 'https://react.dev/' },
   { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
-  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
+  {
+    name: 'Tailwind CSS',
+    icon: RiTailwindCssFill,
+    link: 'https://tailwindcss.com/',
+  },
+  { name: 'Jest', icon: SiJest, link: 'https://jestjs.io/' },
+  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en/' },
+  { name: 'Prisma', icon: SiPrisma, link: 'https://www.prisma.io/' },
   {
     name: 'PostgreSQL',
     icon: SiPostgresql,
     link: 'https://www.postgresql.org/',
   },
-  { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
+  { name: 'Express', icon: SiExpress, link: 'https://expressjs.com/' },
 ];
 
 // TODO: Move to Sanity
