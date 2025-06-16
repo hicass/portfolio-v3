@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ProjectCard from './Projects/ProjectCard';
 import { BlogSectionProps } from '@/types';
 
+// Function to render the Blog section on the main page
 export default function Blog({ blogData }: BlogSectionProps) {
   const projectCardElements = blogData.map((blog, idx) => (
     <ProjectCard item={blog} key={idx} />
@@ -33,7 +34,7 @@ export default function Blog({ blogData }: BlogSectionProps) {
         Check out my reflections, thoughts, and insights.
       </motion.p>
 
-      <div id="projects" className="flex flex-col items-center gap-16 mt-10">
+      <div className="flex flex-col items-center gap-16 mt-10">
         {projectCardElements}
       </div>
     </section>

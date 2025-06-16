@@ -3,8 +3,10 @@ import moment from 'moment';
 import { BlogData } from '@/types';
 import { urlFor } from '@/sanity/lib/image';
 import { PortableTextBlockContainer } from './PortableTextContainer';
+import BlogPageNav from './BlogPageNav';
 import './../../../mesh-gradient.css';
 
+// Function to render the content of the blog page
 export default function BlogPageContent({
   title,
   mainImage,
@@ -47,7 +49,9 @@ export default function BlogPageContent({
   return (
     <main>
       <div className="flex flex-col items-center overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
-        <div className="flex flex-col items-center mx-4 my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-t-[1px] border-t-slate-50/10 bg-slate-50/[3%]">
+        <BlogPageNav />
+
+        <div className="flex flex-col items-center mx-4 my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-[1px] border-slate-50/10 bg-slate-50/[3%]">
           <Header />
 
           <Credit />
