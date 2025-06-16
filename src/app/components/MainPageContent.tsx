@@ -7,7 +7,7 @@ import Playground from './Projects/Playground';
 import Blog from './Blog';
 import Contact from './Contact/Contact';
 import { MainPageContentProps } from '@/types';
-import './mesh-gradient.css';
+import './../mesh-gradient.css';
 
 const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
   return (
