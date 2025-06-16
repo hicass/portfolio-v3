@@ -26,7 +26,7 @@ const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
             <Contact />
           </div>
 
-          <p className="p-2 px-4 text-md text-white text-center">
+          {/* <p className="p-2 px-4 text-md text-white text-center">
             Built and designed by yours truly, using Next.js and a handful of
             other technologies. Check out the{' '}
             <a
@@ -37,7 +37,7 @@ const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
               source code
             </a>{' '}
             to learn more.
-          </p>
+          </p> */}
         </div>
       </div>
     </main>
