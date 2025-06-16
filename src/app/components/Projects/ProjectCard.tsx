@@ -38,7 +38,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
       return (
         <a
           href={item.slug.current}
-          target="_blank"
           className="group transition hover:cursor-pointer"
         >
           <motion.article
