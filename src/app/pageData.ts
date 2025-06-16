@@ -3,6 +3,7 @@ import { SiTypescript, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { BiLogoNodejs } from 'react-icons/bi';
 import { FaReact, FaGitAlt } from 'react-icons/fa';
+import { Project } from './components/Projects/ProjectCard';
 
 export const navData = {
   socialLinks: [
@@ -38,9 +39,10 @@ export const techData = [
 ];
 
 // TODO: Move to Sanity
-export const projectData = [
+export const projectData: Project[] = [
   {
     title: 'Tag Operations',
+    _type: 'project',
     description:
       'Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.',
     date: 'August 2023 - Present',
@@ -60,6 +62,7 @@ export const projectData = [
   },
   {
     title: 'RAMResume',
+    _type: 'project',
     description:
       'As a founding engineer, I collaborated closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality (Currently in development—email me for login access!)',
     date: 'July 2024 - Feb 2025',
@@ -73,13 +76,13 @@ export const projectData = [
       { title: 'Express' },
       {
         title: 'OpenAI API',
-        link: 'https://platform.openai.com/docs/overview',
       },
     ],
     liveLink: 'https://www.ramresume.com/',
   },
   {
     title: 'Custom CMS for a Private Blog',
+    _type: 'project',
     description:
       'I built a custom CMS for a client seeking a secure and private online blog. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
     date: 'August 2024',
@@ -101,9 +104,10 @@ export const projectData = [
 ];
 
 // TODO: Move to Sanity
-export const playgroundData = [
+export const playgroundData: Project[] = [
   {
     title: 'Ask Away',
+    _type: 'project',
     description:
       'Ask Away is a demo Q&A page I built to explore creating animations with pure CSS versus using animation libraries. It’s a playful, non-functional site designed to test motion, layout, and user experience—all while keeping things accessible and kid-friendly.',
     date: 'November 2024',

@@ -5,6 +5,9 @@ export const revalidate = 30;
 
 export default async function MainPage() {
   const AboutData = await client.fetch(`*[_type == "about"][0]`);
+  const BlogData = await client.fetch(`*[_type == "blog"]`);
 
-  return <MainPageContent aboutData={AboutData} />;
-};
+  console.log(BlogData);
+
+  return <MainPageContent aboutData={AboutData} blogData={BlogData} />;
+}

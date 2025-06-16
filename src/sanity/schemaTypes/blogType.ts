@@ -46,20 +46,20 @@ export const blogType = defineType({
       validation: (Rule) => Rule.required().error('Author is required.'),
     }),
     defineField({
-      name: 'publishedAt',
+      name: 'date',
       type: 'datetime',
       validation: (Rule) =>
-        Rule.required().error('Published date is required.'),
+        Rule.required().error('Date is required.'),
     }),
     defineField({
-      name: 'preview',
-      title: 'Preview',
+      name: 'description',
+      title: 'The preview description',
       type: 'text',
       validation: (Rule) =>
         Rule.required()
-          .error('Preview is required.')
+          .error('Preview description is required.')
           .max(300)
-          .error('Preview must be 300 characters or less.'),
+          .error('Preview description must be 300 characters or less.'),
       description:
         'This will be the description displayed on the preview card, no more than 300 characters please.',
     }),

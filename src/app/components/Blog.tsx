@@ -1,12 +1,11 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './Projects/ProjectCard';
-import { blogData } from '../pageData';
+import { BlogSectionProps } from '@/types';
 
-const Blog: FC = () => {
-  const projectCardElements = blogData.map((project, idx) => (
-    <ProjectCard project={project} key={idx} />
+export default function Blog({ blogData }: BlogSectionProps) {
+  const projectCardElements = blogData.map((blog, idx) => (
+    <ProjectCard item={blog} key={idx} />
   ));
 
   return (
@@ -39,6 +38,4 @@ const Blog: FC = () => {
       </div>
     </section>
   );
-};
-
-export default Blog;
+}
