@@ -1,4 +1,5 @@
 'use client';
+import moment from 'moment';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -30,6 +31,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
+  const formattedDate = moment(item.date).format('MMMM Do, YYYY');
+
   if (item) {
     if (item._type === 'blog') {
       return (
@@ -75,14 +78,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
             </div>
 
             {/* Bottom Section */}
-            <div className="flex flex-col lg:flex-row items-end gap-6">
-              {/* <div className="w-full lg:w-1/2">
-            <ul className="flex flex-wrap gap-2">{techListElements}</ul>
-          </div> */}
-
-              <div className="flex md:justify-end gap-4 w-full lg:w-1/2">
-                <p className="text-lg">{item.date}</p>
-              </div>
+            <div className="flex justify-end gap-4 w-full">
+              <p className="text-lg">{formattedDate}</p>
             </div>
           </motion.article>
         </a>
