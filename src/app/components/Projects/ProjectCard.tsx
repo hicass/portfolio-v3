@@ -31,7 +31,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
-  const formattedDate = moment(item.date).format('MMMM Do, YYYY');
+  const formattedDate = moment(item.date, moment.ISO_8601).format('MMMM Do, YYYY');
 
   if (item) {
     if (item._type === 'blog') {
