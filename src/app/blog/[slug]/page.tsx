@@ -3,7 +3,7 @@ import BlogPageContent from './components/BlogPageContent';
 
 export const revalidate = 30;
 
-export default async function blogDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
   params: { slug: string };
