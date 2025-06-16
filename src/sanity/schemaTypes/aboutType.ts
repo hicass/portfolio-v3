@@ -1,11 +1,11 @@
 import { defineField, defineType } from 'sanity';
-import { DocumentTextIcon } from '@sanity/icons';
+import {FaceHappyIcon} from '@sanity/icons'
 
 export const aboutType = defineType({
   name: 'about',
   title: 'About',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: FaceHappyIcon,
   fields: [
     defineField({
       name: 'title',
