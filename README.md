@@ -1,3 +1,4 @@
+🚧 Under Construction — Still building this out, stay tuned!
 <div align='center'>
     <Img alt='Logo' src='./src/app/favicon.ico' width='30px'/>
 </div>
