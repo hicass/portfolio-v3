@@ -50,6 +50,7 @@ export const PortableTextBlockContainer = ({
       strong: ({ children }: any) => (
         <span className="font-bold">{children}</span>
       ),
+      // eslint-disable-next-line
       em: ({ children }: any) => <span className="italic">{children}</span>,
       // eslint-disable-next-line
       link: ({ value, children }: any) => {
@@ -70,15 +71,19 @@ export const PortableTextBlockContainer = ({
       },
     },
     list: {
+      // eslint-disable-next-line
       bullet: ({ children }: any) => (
         <ul className="list-disc ml-6 space-y-4 text-lg">{children}</ul>
       ),
+      // eslint-disable-next-line
       number: ({ children }: any) => (
         <ol className="list-decimal ml-6 space-y-2 text-lg">{children}</ol>
       ),
     },
     listItem: {
+      // eslint-disable-next-line
       bullet: ({ children }: any) => <li>{children}</li>,
+      // eslint-disable-next-line
       number: ({ children }: any) => <li>{children}</li>,
     },
   };
