@@ -40,3 +40,25 @@ export interface BlogSectionProps {
   blogData: BlogData[];
 }
 
+export type Project = {
+  /** The title of the project */
+  title: string;
+  /** The description of the project */
+  description: string;
+  /** The date of the project */
+  date: string;
+  /** The path to the image in the public directory */
+  imagePath: string;
+  /** The alternative text for the image */
+  imageAlt: string;
+  /** The list of technologies used in the project */
+  techList: ProjectTech[];
+  /** The link to the live project */
+  liveLink: string;
+  /** The type of the object */
+  _type: 'project';
+};
+
+type ProjectTech = {
+  title: string;
+};

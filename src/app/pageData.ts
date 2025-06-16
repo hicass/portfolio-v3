@@ -3,7 +3,7 @@ import { SiTypescript, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { BiLogoNodejs } from 'react-icons/bi';
 import { FaReact, FaGitAlt } from 'react-icons/fa';
-import { Project } from './components/Projects/ProjectCard';
+import { Project } from '@/types';
 
 export const navData = {
   socialLinks: [

@@ -5,24 +5,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { slideUpFast } from '@/app/utils/animations';
-import { BlogData } from '@/types';
+import { BlogData, Project } from '@/types';
 import { urlFor } from '@/sanity/lib/image';
-
-export type Project = {
-  title: string;
-  description?: string;
-  date: string;
-  imagePath: string;
-  imageAlt: string;
-  techList: ProjectTech[];
-  liveLink: string;
-  repoLink?: string;
-  _type: 'project';
-};
-
-type ProjectTech = {
-  title: string;
-};
 
 type ProjectOrBlog = Project | BlogData;
 
@@ -30,6 +14,7 @@ interface ProjectCardProps {
   item: ProjectOrBlog;
 }
 
+// Function to render a project card
 const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
   const formattedDate = moment(item.date, moment.ISO_8601).format('MMMM Do, YYYY');
 
