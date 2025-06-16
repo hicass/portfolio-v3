@@ -1,8 +1,14 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { SiTypescript, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
+import { SiExpress } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
 import { BiLogoNodejs } from 'react-icons/bi';
-import { FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiJest } from 'react-icons/si';
+import { SiPrisma } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
+import { BiSolidFileCss } from 'react-icons/bi';
+import { Project } from '@/types';
 
 export const navData = {
   socialLinks: [
@@ -26,21 +32,34 @@ export const techData = [
     icon: SiTypescript,
     link: 'https://www.typescriptlang.org/',
   },
+  {
+    name: 'CSS',
+    icon: BiSolidFileCss,
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  },
   { name: 'React', icon: FaReact, link: 'https://react.dev/' },
   { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
-  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en' },
+  {
+    name: 'Tailwind CSS',
+    icon: RiTailwindCssFill,
+    link: 'https://tailwindcss.com/',
+  },
+  { name: 'Jest', icon: SiJest, link: 'https://jestjs.io/' },
+  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en/' },
+  { name: 'Prisma', icon: SiPrisma, link: 'https://www.prisma.io/' },
   {
     name: 'PostgreSQL',
     icon: SiPostgresql,
     link: 'https://www.postgresql.org/',
   },
-  { name: 'Git', icon: FaGitAlt, link: 'https://git-scm.com/' },
+  { name: 'Express', icon: SiExpress, link: 'https://expressjs.com/' },
 ];
 
 // TODO: Move to Sanity
-export const projectData = [
+export const projectData: Project[] = [
   {
     title: 'Tag Operations',
+    _type: 'project',
     description:
       'Solely designed and developed a modern, responsive website for Tag Operations, aligning with the company’s brand and personality. I implemented an atomic design system to build consistent, reusable components and streamline both development and future scalability.',
     date: 'August 2023 - Present',
@@ -60,6 +79,7 @@ export const projectData = [
   },
   {
     title: 'RAMResume',
+    _type: 'project',
     description:
       'As a founding engineer, I collaborated closely with designers, other engineers and stakeholders to bring RAMResume, an AI-powered career toolbox for Fordham University students—from concept to reality (Currently in development—email me for login access!)',
     date: 'July 2024 - Feb 2025',
@@ -73,13 +93,13 @@ export const projectData = [
       { title: 'Express' },
       {
         title: 'OpenAI API',
-        link: 'https://platform.openai.com/docs/overview',
       },
     ],
     liveLink: 'https://www.ramresume.com/',
   },
   {
     title: 'Custom CMS for a Private Blog',
+    _type: 'project',
     description:
       'I built a custom CMS for a client seeking a secure and private online blog. To maintain the client’s privacy, the live version linked here is a demo with completely different styling. Explore the demo using the credentials: username = test, password = test123 to experience its functionality firsthand!',
     date: 'August 2024',
@@ -101,9 +121,10 @@ export const projectData = [
 ];
 
 // TODO: Move to Sanity
-export const playgroundData = [
+export const playgroundData: Project[] = [
   {
     title: 'Ask Away',
+    _type: 'project',
     description:
       'Ask Away is a demo Q&A page I built to explore creating animations with pure CSS versus using animation libraries. It’s a playful, non-functional site designed to test motion, layout, and user experience—all while keeping things accessible and kid-friendly.',
     date: 'November 2024',
@@ -118,20 +139,5 @@ export const playgroundData = [
       { title: 'CSS' },
     ],
     liveLink: 'https://ask-away-one.vercel.app/',
-  },
-];
-
-// TODO: Move to Sanity
-export const blogData = [
-  {
-    title:
-      'How Building the Same Website Three Times Made Me a Better Developer',
-    description:
-      'I rebuilt the same website three times, each version reflecting my growth as a developer. In this article, I share what I learned and how the project helped me grow, covering everything from React basics to optimizing design, performance, discoverability, accessibility, and maintainability.',
-    imagePath: '/images/blog-1.png',
-    imageAlt:
-      'An image of the title of the article with a before and after of the website',
-    liveLink:
-      'https://www.linkedin.com/pulse/how-building-same-website-three-times-made-me-better-cass-walters-uhv3c/?trackingId=JdJSG0tiSMecUZOAVHZL5g%3D%3D',
   },
 ];

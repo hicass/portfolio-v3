@@ -6,11 +6,14 @@ import { playgroundData } from '@/app/pageData';
 
 const Playground: FC = () => {
   const playgroundCardElements = playgroundData.map((playground, idx) => (
-    <ProjectCard project={playground} key={idx} />
+    <ProjectCard item={playground} key={idx} />
   ));
 
   return (
-    <section id="playground" className="flex flex-col items-center relative border-b border-orange pb-6 scroll-m-36">
+    <section
+      id="playground"
+      className="flex flex-col items-center relative border-b border-orange pb-6 scroll-m-36"
+    >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

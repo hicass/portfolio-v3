@@ -30,7 +30,7 @@ const Tech: FC = () => {
         tech
       </h2>
 
-      <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-20 mt-10">
+      <div className="flex flex-row flex-wrap md:justify-center gap-6 md:gap-x-20 md:gap-y-10 mt-10">
         {techIconElements}
       </div>
     </motion.section>

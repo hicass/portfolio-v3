@@ -6,7 +6,7 @@ import { projectData } from '@/app/pageData';
 
 const Projects: FC = () => {
   const projectCardElements = projectData.map((project, idx) => (
-    <ProjectCard project={project} key={idx} />
+    <ProjectCard item={project} key={idx} />
   ));
 
   return (

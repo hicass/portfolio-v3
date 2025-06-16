@@ -7,9 +7,9 @@ import Playground from './Projects/Playground';
 import Blog from './Blog';
 import Contact from './Contact/Contact';
 import { MainPageContentProps } from '@/types';
-import './mesh-gradient.css';
+import './../mesh-gradient.css';
 
-const MainPageContent = ({ aboutData }: MainPageContentProps) => {
+const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
   return (
     <main>
       <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
@@ -21,12 +21,12 @@ const MainPageContent = ({ aboutData }: MainPageContentProps) => {
             <About {...aboutData} />
             <Tech />
             <Projects />
-            <Blog />
+            <Blog blogData={blogData} />
             <Playground />
             <Contact />
           </div>
 
-          <p className="p-2 px-4 text-md text-white text-center">
+          {/* <p className="p-2 px-4 text-md text-white text-center">
             Built and designed by yours truly, using Next.js and a handful of
             other technologies. Check out the{' '}
             <a
@@ -37,7 +37,7 @@ const MainPageContent = ({ aboutData }: MainPageContentProps) => {
               source code
             </a>{' '}
             to learn more.
-          </p>
+          </p> */}
         </div>
       </div>
     </main>
