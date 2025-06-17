@@ -7,9 +7,11 @@ import { slideUpFast } from '@/app/utils/animations';
 import { ProjectCardProps } from '@/types';
 import { urlFor } from '@/sanity/lib/image';
 
+// Helper for formatting the date data
 const formatDate = (date?: string) =>
   date ? moment(date).format('MMMM YYYY') : 'Present';
 
+// Helper for rendering the list of technologies used in a project
 const TechList = ({ tech }: { tech: string[] }) => (
   <ul className="flex flex-wrap gap-2">
     {tech.map((item, idx) => (
@@ -23,12 +25,14 @@ const TechList = ({ tech }: { tech: string[] }) => (
   </ul>
 );
 
+// Helper for rendering the image on the project card
 const CardMediaSection = ({ image, alt }: { image: string; alt: string }) => (
   <figure className="w-full lg:w-1/2">
     <Image src={image} alt={alt} width={800} height={800} className="rounded" />
   </figure>
 );
 
+// Helper for rendering the text section on the card that has the title and description
 const CardTextSection = ({
   title,
   description,

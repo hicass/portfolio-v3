@@ -4,7 +4,7 @@ import { slideInFastFR } from '../utils/animations';
 import { AboutData } from '@/types';
 import { PortableText } from 'next-sanity';
 
-const About = ({ bio }: AboutData) => {
+export default function About({ bio }: AboutData) {
   return (
     <motion.section
       id="about"
@@ -23,6 +23,4 @@ const About = ({ bio }: AboutData) => {
       </div>
     </motion.section>
   );
-};
-
-export default About;
+}

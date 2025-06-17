@@ -1,5 +1,4 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInFastFL } from '../utils/animations';
 import { SiTypescript, SiPostgresql } from 'react-icons/si';
@@ -41,7 +40,8 @@ const techData = [
   { name: 'Express', icon: SiExpress, link: 'https://expressjs.com/' },
 ];
 
-const Tech: FC = () => {
+// Function to render the Tech section on the main page
+export default function Tech() {
   const techIconElements = techData.map((tech, idx) => (
     <a
       className="flex flex-col items-center gap-4 text-5xl hover:text-orange"
@@ -72,6 +72,4 @@ const Tech: FC = () => {
       </div>
     </motion.section>
   );
-};
-
-export default Tech;
+}

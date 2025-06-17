@@ -1,5 +1,4 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInSlowFL, slideInSlowFR } from '@/app/utils/animations';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
@@ -19,7 +18,8 @@ export const navData = {
   ],
 };
 
-const Nav: FC = () => {
+// Function to render the Nav
+export default function Nav() {
   const pageLinkElements = navData.pageLinks.map((link, idx) => (
     <li key={idx}>
       <a href={link.href} className="text-white hover:text-orange">
@@ -70,5 +70,3 @@ const Nav: FC = () => {
     </>
   );
 };
-
-export default Nav;

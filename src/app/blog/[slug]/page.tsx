@@ -3,6 +3,7 @@ import BlogPageContent from './components/BlogPageContent';
 
 export const revalidate = 30;
 
+// Function to render to dynamic route blog detail page
 export default async function BlogDetailPage({
   params,
 }: {
