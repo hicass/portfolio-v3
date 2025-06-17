@@ -2,10 +2,15 @@
 import { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { navData } from '@/app/pageData';
 import { slideInSlowFL } from '@/app/utils/animations';
 import { HiMiniArrowLeftStartOnRectangle } from 'react-icons/hi2';
 import { AiOutlineHome } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+
+const blogPageNavData = [
+  { icon: AiFillGithub, href: 'https://github.com/hicass' },
+  { icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/cass-walters/' },
+];
 
 const BlogPageNav: FC = () => {
   const [fromSameDomain, setFromSameDomain] = useState(false);
@@ -26,7 +31,7 @@ const BlogPageNav: FC = () => {
     }
   }, []);
 
-  const socialLinkElements = navData.socialLinks.map((link, idx) => (
+  const socialLinkElements = blogPageNavData.map((link, idx) => (
     <li key={idx}>
       <a
         href={link.href}
@@ -47,9 +52,9 @@ const BlogPageNav: FC = () => {
         once: true,
         amount: 0.4,
       }}
-      className="hidden w-full md:flex flex-row sticky top-6 -mt-24 px-8"
+      className="w-full flex flex-row md:sticky top-0 md:top-6 mt-8 md:-mt-24 px-8"
     >
-      <ul className="flex flex-col items-center gap-4">
+      <ul className="flex md:flex-col items-center gap-4">
         {socialLinkElements}
 
         <li className={`hover:cursor-pointer ${fromSameDomain && '-ml-2'}`}>

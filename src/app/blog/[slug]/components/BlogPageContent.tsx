@@ -51,7 +51,7 @@ export default function BlogPageContent({
       <div className="flex flex-col items-center overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
         <BlogPageNav />
 
-        <div className="flex flex-col items-center mx-4 my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-[1px] border-slate-50/10 bg-slate-50/[3%]">
+        <div className="flex flex-col items-center mx-4 my-8 md:my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-[1px] border-slate-50/10 bg-slate-50/[3%]">
           <Header />
 
           <Credit />
