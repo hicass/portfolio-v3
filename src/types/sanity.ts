@@ -31,3 +31,10 @@ export interface SanityLink {
   _type: 'link';
   href: string;
 }
+
+export interface DateRange {
+  /** The beginning date of the range */
+  startDate: string;
+  /** The ending date of the range */
+  endDate: string;
+}

@@ -9,7 +9,13 @@ import Contact from './Contact/Contact';
 import { MainPageContentProps } from '@/types';
 import './../mesh-gradient.css';
 
-const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
+// Function to render the components of the main page
+export default function MainPageContent({
+  aboutData,
+  blogData,
+  playgroundData,
+  projectData,
+}: MainPageContentProps) {
   return (
     <main>
       <div className="flex flex-col items-start overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
@@ -20,13 +26,13 @@ const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
           <div className="mx-4 sm:w-3/4 md:w-[60%] lg:max-w-3xl lg:w-full xl:max-w-4xl flex flex-col gap-28 md:gap-52">
             <About {...aboutData} />
             <Tech />
-            <Projects />
+            <Projects projectData={projectData} />
             <Blog blogData={blogData} />
-            <Playground />
+            <Playground projectData={playgroundData} />
             <Contact />
           </div>
 
-          {/* <p className="p-2 px-4 text-md text-white text-center">
+          <p className="p-2 px-4 text-md text-white text-center">
             Built and designed by yours truly, using Next.js and a handful of
             other technologies. Check out the{' '}
             <a
@@ -37,11 +43,9 @@ const MainPageContent = ({ aboutData, blogData }: MainPageContentProps) => {
               source code
             </a>{' '}
             to learn more.
-          </p> */}
+          </p>
         </div>
       </div>
     </main>
   );
-};
-
-export default MainPageContent;
+}

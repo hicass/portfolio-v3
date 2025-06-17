@@ -1,12 +1,16 @@
 import { PortableTextBlock } from '@portabletext/types';
 import { Slug } from 'sanity';
-import { SanityImage } from './sanity';
+import { DateRange, SanityImage } from './sanity';
 
 export interface MainPageContentProps {
   /** The data for the About section */
   aboutData: AboutData;
+  /** The data for the Project section */
+  projectData: Project[];
   /** The data for the Blog section */
   blogData: BlogData[];
+  /** The data for the Playground section */
+  playgroundData: Project[];
 }
 
 export type AboutData = {
@@ -48,17 +52,28 @@ export type Project = {
   /** The date of the project */
   date: string;
   /** The path to the image in the public directory */
-  imagePath: string;
+  image: SanityImage;
   /** The alternative text for the image */
   imageAlt: string;
   /** The list of technologies used in the project */
-  techList: ProjectTech[];
+  technologyOverview: string[];
+  /** The duration the project was worked on */
+  duration: DateRange;
+  /** Is the project a personal one? */
+  personal: boolean;
   /** The link to the live project */
   liveLink: string;
   /** The type of the object */
   _type: 'project';
 };
 
-type ProjectTech = {
-  title: string;
-};
+export interface ProjectSectionProps {
+  /** The array of projects */
+  projectData: Project[];
+}
+
+type ProjectOrBlog = Project | BlogData;
+
+export interface ProjectCardProps {
+  item: ProjectOrBlog;
+}
