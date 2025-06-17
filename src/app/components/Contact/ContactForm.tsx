@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState, FC } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
 import { BsSendCheck } from 'react-icons/bs';
