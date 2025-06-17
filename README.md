@@ -1,4 +1,3 @@
-🚧 Under Construction — Still building this out, stay tuned!
 <div align='center'>
     <Img alt='Logo' src='./src/app/favicon.ico' width='30px'/>
 </div>
@@ -13,10 +12,10 @@
     <Img alt='App Screen Shot' src='./public/images/readme.png'>
 </div>
 
-
 ## Tech Stack
 
-**Client:** 
+**Client:**
+
 - [Next.Js](https://nextjs.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -24,16 +23,19 @@
 - [Validator](https://www.npmjs.com/package/validator)
 - [React Icons](https://react-icons.github.io/react-icons/)
 
-**Server:** 
+**Server:**
+
 - [Node](https://nodejs.org/en)
 
 **Deployment:**
+
 - [Vercel](https://vercel.com/)
 
 ## Features
 
 - A comprehensive look into who I am as a Developer and the projects I have created.
 - Responsive Design.
+- A Blog where I can share my reflections and insights.
 - Contact form with email verification and sent confirmation message.
 - Dynamic animations for an engaging user experience.
 
@@ -52,14 +54,18 @@
    npm install
 
    ```
+
 3. **Install dependencies:**
 
    - Create `.env`
    - Create an account on [Email.JS](https://www.emailjs.com/) and retrieve your email key
+   - Set up a project with [Sanity](https://www.sanity.io/) and get your project id and data set keys
    - Fill in the necessary environment variables:
 
    ```
    NEXT_PUBLIC_EMAIL_KEY=<enter your key here>
+   NEXT_PUBLIC_SANITY_PROJECT_ID=<enter your key here>
+    NEXT_PUBLIC_SANITY_DATASET=<enter your key here>
    ```
 
 4. **Run the development server:**
@@ -72,11 +78,11 @@
 
 ## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| White | #f6e8e2|
+| Color  | Hex     |
+| ------ | ------- |
+| White  | #f6e8e2 |
 | Orange | #ef8645 |
-| Green | #24372a |
+| Green  | #24372a |
 
 ## Font Reference
 
