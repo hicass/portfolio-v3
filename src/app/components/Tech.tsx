@@ -1,10 +1,47 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInFastFL } from '../utils/animations';
-import { techData } from '@/app/pageData';
+import { SiTypescript, SiPostgresql } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
+import { SiExpress } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { BiLogoNodejs } from 'react-icons/bi';
+import { SiJest } from 'react-icons/si';
+import { SiPrisma } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
+import { SiStorybook } from 'react-icons/si';
 
-const Tech: FC = () => {
+const techData = [
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'Storybook',
+    icon: SiStorybook,
+    link: 'https://storybook.js.org/',
+  },
+  { name: 'React', icon: FaReact, link: 'https://react.dev/' },
+  { name: 'Next.js', icon: TbBrandNextjs, link: 'https://nextjs.org/' },
+  {
+    name: 'Tailwind CSS',
+    icon: RiTailwindCssFill,
+    link: 'https://tailwindcss.com/',
+  },
+  { name: 'Jest', icon: SiJest, link: 'https://jestjs.io/' },
+  { name: 'Node.js', icon: BiLogoNodejs, link: 'https://nodejs.org/en/' },
+  { name: 'Prisma', icon: SiPrisma, link: 'https://www.prisma.io/' },
+  {
+    name: 'PostgreSQL',
+    icon: SiPostgresql,
+    link: 'https://www.postgresql.org/',
+  },
+  { name: 'Express', icon: SiExpress, link: 'https://expressjs.com/' },
+];
+
+// Function to render the Tech section on the main page
+export default function Tech() {
   const techIconElements = techData.map((tech, idx) => (
     <a
       className="flex flex-col items-center gap-4 text-5xl hover:text-orange"
@@ -35,6 +72,4 @@ const Tech: FC = () => {
       </div>
     </motion.section>
   );
-};
-
-export default Tech;
+}

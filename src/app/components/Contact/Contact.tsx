@@ -1,9 +1,9 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from './ContactForm';
 
-const Contact: FC = () => {
+// Function to render the contact section on the main page
+export default function Contact() {
   return (
     <section id="contact" className="flex flex-col items-center relative mb-24 scroll-m-36">
       <motion.h2
@@ -41,5 +41,3 @@ const Contact: FC = () => {
     </section>
   );
 };
-
-export default Contact;

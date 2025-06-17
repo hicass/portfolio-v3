@@ -1,10 +1,10 @@
 'use client';
-import { useRef, useState, FC } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
 import { BsSendCheck } from 'react-icons/bs';
 
-const ContactForm: FC = () => {
+export default function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [emailMessage, setEmailMessage] = useState('');
@@ -143,6 +143,4 @@ const ContactForm: FC = () => {
       </form>
     </section>
   );
-};
-
-export default ContactForm;
+}

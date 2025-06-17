@@ -1,9 +1,11 @@
+'use client';
 import Image from 'next/image';
 import moment from 'moment';
 import { BlogData } from '@/types';
 import { urlFor } from '@/sanity/lib/image';
 import { PortableTextBlockContainer } from './PortableTextContainer';
 import BlogPageNav from './BlogPageNav';
+import { motion } from 'framer-motion';
 import './../../../mesh-gradient.css';
 
 // Function to render the content of the blog page
@@ -51,7 +53,12 @@ export default function BlogPageContent({
       <div className="flex flex-col items-center overflow-y-visible overflow-x-hidden h-screen w-screen relative text-white font-[family-name:var(--font-satoshi)]">
         <BlogPageNav />
 
-        <div className="flex flex-col items-center mx-4 my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-[1px] border-slate-50/10 bg-slate-50/[3%]">
+        <motion.article
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="flex flex-col items-center mx-4 my-8 md:my-14 md:max-w-3xl lg:w-full xl:max-w-4xl p-8 rounded-lg border-[1px] border-slate-50/10 bg-slate-50/[3%]"
+        >
           <Header />
 
           <Credit />
@@ -59,7 +66,7 @@ export default function BlogPageContent({
           <div>
             <PortableTextBlockContainer body={body} />
           </div>
-        </div>
+        </motion.article>
       </div>
     </main>
   );

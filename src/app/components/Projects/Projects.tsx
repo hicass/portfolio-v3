@@ -1,10 +1,10 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { projectData } from '@/app/pageData';
+import { ProjectSectionProps } from '@/types';
 
-const Projects: FC = () => {
+// Function to render the projects section on the main page
+export default function Projects({ projectData }: ProjectSectionProps) {
   const projectCardElements = projectData.map((project, idx) => (
     <ProjectCard item={project} key={idx} />
   ));
@@ -39,6 +39,4 @@ const Projects: FC = () => {
       </div>
     </section>
   );
-};
-
-export default Projects;
+}

@@ -1,11 +1,11 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { playgroundData } from '@/app/pageData';
+import { ProjectSectionProps } from '@/types';
 
-const Playground: FC = () => {
-  const playgroundCardElements = playgroundData.map((playground, idx) => (
+// Function to render the playground section on the main page
+export default function Playground({ projectData }: ProjectSectionProps) {
+  const playgroundCardElements = projectData.map((playground, idx) => (
     <ProjectCard item={playground} key={idx} />
   ));
 
@@ -39,6 +39,4 @@ const Playground: FC = () => {
       </div>
     </section>
   );
-};
-
-export default Playground;
+}

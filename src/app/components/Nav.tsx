@@ -1,10 +1,25 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInSlowFL, slideInSlowFR } from '@/app/utils/animations';
-import { navData } from '@/app/pageData';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
-const Nav: FC = () => {
+export const navData = {
+  socialLinks: [
+    { icon: AiFillGithub, href: 'https://github.com/hicass' },
+    { icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/cass-walters/' },
+  ],
+  pageLinks: [
+    { text: 'about me', href: '#about' },
+    { text: 'tech', href: '#tech' },
+    { text: 'projects', href: '#projects' },
+    { text: 'blog', href: '#blog' },
+    { text: 'playground', href: '#playground' },
+    { text: 'contact', href: '#contact' },
+  ],
+};
+
+// Function to render the Nav
+export default function Nav() {
   const pageLinkElements = navData.pageLinks.map((link, idx) => (
     <li key={idx}>
       <a href={link.href} className="text-white hover:text-orange">
@@ -55,5 +70,3 @@ const Nav: FC = () => {
     </>
   );
 };
-
-export default Nav;

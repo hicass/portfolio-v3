@@ -1,9 +1,9 @@
 'use client';
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const Hero: FC = () => {
+// Function to render the Hero section on the main page
+export default function Hero() {
   return (
     <header className="flex flex-col items-center w-full">
       <motion.div
@@ -48,5 +48,3 @@ const Hero: FC = () => {
     </header>
   );
 };
-
-export default Hero;
