@@ -2,7 +2,22 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { slideInSlowFL, slideInSlowFR } from '@/app/utils/animations';
-import { navData } from '@/app/pageData';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+
+export const navData = {
+  socialLinks: [
+    { icon: AiFillGithub, href: 'https://github.com/hicass' },
+    { icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/cass-walters/' },
+  ],
+  pageLinks: [
+    { text: 'about me', href: '#about' },
+    { text: 'tech', href: '#tech' },
+    { text: 'projects', href: '#projects' },
+    { text: 'blog', href: '#blog' },
+    { text: 'playground', href: '#playground' },
+    { text: 'contact', href: '#contact' },
+  ],
+};
 
 const Nav: FC = () => {
   const pageLinkElements = navData.pageLinks.map((link, idx) => (
