@@ -1,5 +1,6 @@
 import { Variants } from 'framer-motion';
 
+// Slide in slow from the left
 export const slideInSlowFL: Variants = {
   offscreen: {
     x: -10,
@@ -16,6 +17,7 @@ export const slideInSlowFL: Variants = {
   },
 };
 
+// Slide in slow from the right
 export const slideInSlowFR: Variants = {
   offscreen: {
     x: 10,
@@ -32,6 +34,7 @@ export const slideInSlowFR: Variants = {
   },
 };
 
+// Slide in fast from the right
 export const slideInFastFR: Variants = {
   offscreen: {
     x: 200,
@@ -48,6 +51,7 @@ export const slideInFastFR: Variants = {
   },
 };
 
+// Slide in fast from the left
 export const slideInFastFL: Variants = {
   offscreen: {
     x: -200,
@@ -64,6 +68,7 @@ export const slideInFastFL: Variants = {
   },
 };
 
+// Slide up from the bottom fast
 export const slideUpFast: Variants = {
   offscreen: {
     y: 200,
