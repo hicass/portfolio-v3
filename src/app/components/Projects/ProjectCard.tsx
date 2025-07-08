@@ -56,7 +56,8 @@ export default function ProjectCard({ item }: ProjectCardProps) {
   const isBlog = item._type === 'blog';
   const isProject = item._type === 'project';
 
-  const href = isBlog ? item.slug.current : item.liveLink;
+  const href = isBlog ? item.slug.current : item.link;
+
   const image = isBlog
     ? (item.mainImage?.url ?? urlFor(item.mainImage.asset!).url())
     : (item.image?.url ?? urlFor(item.image.asset!).url());

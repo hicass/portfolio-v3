@@ -62,7 +62,7 @@ export type Project = {
   /** Is the project a personal one? */
   personal: boolean;
   /** The link to the live project */
-  liveLink: string;
+  link: string;
   /** The type of the object */
   _type: 'project';
 };
